@@ -112,7 +112,11 @@ def create_or_load_vector_store(docs_path='./knowledge_base', index_path='./fais
     if os.path.exists(index_path):
         try:
             print(f"Loading existing FAISS index from: {index_path}")
-            vector_store = FAISS.load_local(index_path, embeddings)
+            vector_store = FAISS.load_local(
+                index_path, 
+                embeddings, 
+                allow_dangerous_deserialization=True
+            )
             print("Successfully loaded FAISS index.")
             return vector_store
         except Exception as e:
@@ -181,7 +185,10 @@ if __name__ == "__main__":
     embeddings = init_embeddings()
     if docs and embeddings:
         chunks = split_documents(docs)
-        print(f"First chunk sample: {chunks[0].page_content[:150]}..." if chunks else "No chunks created")
+        try:
+            print(f"First chunk sample: {chunks[0].page_content[:150]}..." if chunks else "No chunks created")
+        except Exception as e:
+            print(f"Error displaying first chunk: {e}")
     
     embeddings = init_embeddings()
     if embeddings:
