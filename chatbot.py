@@ -59,8 +59,10 @@ INSTRUCTIONS:
 7. VERY IMPORTANT - If the context mentions or implies a diagram would be helpful, create a simple Mermaid diagram code within a markdown code block (```mermaid ... ```). Keep diagrams simple (flowchart TD, comparison, etc.) Only include a diagram if it adds real value.
 
 MERMAID DIAGRAM RULES:
-- Always start with a valid diagram type: flowchart TD, flowchart LR, classDiagram, etc.
+- Always start with a valid diagram type: "flowchart TD", "flowchart LR", "classDiagram", etc.
 - Use simple syntax and keep diagrams concise
+- CRITICAL: Never use double quotes within node labels - use single quotes or no quotes for text
+- CRITICAL: Always define nodes with simple IDs like A, B, C or node1, node2
 - Ensure all nodes are properly defined before they're referenced
 - For flowcharts, use this structure:
   ```mermaid
@@ -68,7 +70,13 @@ MERMAID DIAGRAM RULES:
     A[Start] --> B[Process]
     B --> C[End]
   ```
-- Test your diagram mentally to ensure it's valid Mermaid syntax
+- For nodes with multiple words, use this format:
+  ```mermaid
+  flowchart TD
+    A[Training Data] --> B[Model Training]
+    B --> C[Evaluation]
+  ```
+- Avoid using special characters or punctuation in node labels when possible
 
 CONTEXT:
 {context}
@@ -98,14 +106,49 @@ def create_rag_chain(vector_store, llm, prompt_template):
     Returns:
         Runnable: The RAG chain that can be invoked with a question
     """
-    # Create a retriever from the vector store
-    retriever = vector_store.as_retriever(search_kwargs={"k": 4})
+    # Create a retriever from the vector store with improved search parameters
+    retriever = vector_store.as_retriever(
+        search_kwargs={
+            "k": 5,  # Increase from 4 to 5 for better coverage
+            "fetch_k": 20,  # Fetch more candidates before filtering down
+            "score_threshold": None  # Don't set a minimum score threshold
+        }
+    )
     
     # Define how to retrieve context
     def retrieve_context(question):
-        docs = retriever.invoke(question)
+        # Improve search by trying different variations of the question
+        search_queries = [
+            question,
+            # Add lowercase version for case-insensitive matching
+            question.lower(),
+            # Try extracting just the concept name if it's in the format "Explain X"
+            question.replace("explain ", "").replace("what is ", "").replace("?", "").strip()
+        ]
+        
+        # Try each search query until we get results
+        all_docs = []
+        for query in search_queries:
+            docs = retriever.invoke(query)
+            if docs:
+                all_docs.extend(docs)
+                if len(all_docs) >= 3:  # Ensure we have at least 3 relevant documents
+                    break
+        
+        # Deduplicate documents based on content
+        unique_contents = {}
+        for doc in all_docs:
+            content = doc.page_content.strip()
+            if content not in unique_contents:
+                unique_contents[content] = doc
+        
+        deduplicated_docs = list(unique_contents.values())
+        
         # Join the content of all retrieved documents
-        return "\n\n".join(doc.page_content for doc in docs)
+        context = "\n\n".join(doc.page_content for doc in deduplicated_docs[:5])  # Limit to top 5
+        
+        print(f"Retrieved {len(deduplicated_docs)} unique document chunks for '{question}'")
+        return context
     
     # Build the RAG chain using LCEL
     rag_chain = (

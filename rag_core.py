@@ -89,7 +89,7 @@ def init_embeddings():
         print(f"Error initializing embeddings: {e}")
         return None
 
-def create_or_load_vector_store(docs_path='./knowledge_base', index_path='./faiss_index', embeddings=None):
+def create_or_load_vector_store(docs_path='./knowledge_base', index_path='./faiss_index', embeddings=None, force_rebuild=False):
     """
     Create or load a FAISS vector store from documents.
     
@@ -97,6 +97,7 @@ def create_or_load_vector_store(docs_path='./knowledge_base', index_path='./fais
         docs_path (str): Path to the documents directory
         index_path (str): Path to save/load the FAISS index
         embeddings: The embeddings model to use
+        force_rebuild (bool): If True, rebuild the index even if it exists
         
     Returns:
         FAISS: The FAISS vector store
@@ -108,8 +109,8 @@ def create_or_load_vector_store(docs_path='./knowledge_base', index_path='./fais
             print("Failed to initialize embeddings. Cannot create vector store.")
             return None
     
-    # Check if FAISS index already exists
-    if os.path.exists(index_path):
+    # Check if FAISS index already exists and we're not forcing a rebuild
+    if os.path.exists(index_path) and not force_rebuild:
         try:
             print(f"Loading existing FAISS index from: {index_path}")
             vector_store = FAISS.load_local(
@@ -117,11 +118,14 @@ def create_or_load_vector_store(docs_path='./knowledge_base', index_path='./fais
                 embeddings, 
                 allow_dangerous_deserialization=True
             )
-            print("Successfully loaded FAISS index.")
+            print(f"Successfully loaded FAISS index with {vector_store.index.ntotal} vectors.")
             return vector_store
         except Exception as e:
             print(f"Error loading FAISS index: {e}")
             print("Will attempt to create a new index.")
+    else:
+        if force_rebuild:
+            print("Forcing rebuild of FAISS index...")
     
     # Load and process documents
     docs = load_documents(docs_path)
@@ -142,8 +146,10 @@ def create_or_load_vector_store(docs_path='./knowledge_base', index_path='./fais
         
         # Save the index
         print(f"Saving FAISS index to: {index_path}")
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(index_path), exist_ok=True)
         vector_store.save_local(index_path)
-        print("Successfully created and saved FAISS index.")
+        print(f"Successfully created and saved FAISS index with {vector_store.index.ntotal} vectors.")
         
         return vector_store
     except Exception as e:
