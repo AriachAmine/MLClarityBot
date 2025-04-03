@@ -9,32 +9,35 @@ load_dotenv()
 
 # Constants
 ML_CONCEPTS = [
+    # Learning Paradigms
     "Supervised Learning",
     "Unsupervised Learning",
     "Semi-Supervised Learning",
     "Reinforcement Learning",
     "Self-Supervised Learning",
+    "Online Learning",
+    "Meta-Learning",
     
     # Model Types
     "Classification",
     "Regression",
     "Clustering",
     "Anomaly Detection",
+    "Ranking Models",
+    "Multi-Label Classification",
+    "Multi-Task Learning",
     
-    # Model Performance
+    # Bias & Variance
     "Overfitting",
     "Underfitting",
     "Bias-Variance Tradeoff",
+    "Regularization",
+    
+    # Model Validation & Evaluation
     "Cross-Validation",
-    
-    # Feature Engineering
-    "Feature Engineering Basics",
-    "Feature Scaling",
-    "Feature Selection",
-    "Dimensionality Reduction",
-    "Principal Component Analysis (PCA)",
-    
-    # Model Evaluation
+    "Train-Test Split",
+    "Holdout Validation",
+    "Bootstrapping",
     "Accuracy",
     "Precision",
     "Recall",
@@ -46,62 +49,119 @@ ML_CONCEPTS = [
     "Log Loss",
     "AUC-ROC Curve",
     "Confusion Matrix",
+    "Precision-Recall Curve",
+    "Perplexity (for NLP)",
     
-    # Algorithms
-    "K-Nearest Neighbors (KNN) Concept",
-    "Decision Trees",
-    "Random Forest",
-    "Gradient Boosting",
-    "XGBoost",
-    "Support Vector Machines (SVM)",
-    "Naive Bayes",
-    "Neural Networks",
-    "Convolutional Neural Networks (CNNs)",
-    "Recurrent Neural Networks (RNNs)",
-    "Long Short-Term Memory (LSTM)",
-    "Transformer Models",
+    # Feature Engineering & Selection
+    "Feature Engineering Basics",
+    "Feature Scaling",
+    "Feature Selection",
+    "Dimensionality Reduction",
+    "Principal Component Analysis (PCA)",
+    "t-Distributed Stochastic Neighbor Embedding (t-SNE)",
+    "Linear Discriminant Analysis (LDA)",
+    "Mutual Information",
+    "Polynomial Features",
+    "Sparse Representations",
     
     # Optimization & Training
     "Gradient Descent",
     "Stochastic Gradient Descent (SGD)",
     "Adam Optimizer",
+    "Momentum-based Optimization",
+    "Nesterov Accelerated Gradient (NAG)",
+    "RMSprop",
     "Learning Rate Scheduling",
     "Batch Normalization",
     "Dropout Regularization",
+    "Early Stopping",
     "Hyperparameter Tuning",
+    "Bayesian Optimization",
+    "Grid Search",
+    "Random Search",
     
-    # Advanced Concepts
-    "Ensemble Learning",
-    "Bagging & Boosting",
-    "Attention Mechanism",
-    "Transfer Learning",
-    "Few-Shot Learning",
-    "Zero-Shot Learning",
-    "Self-Attention",
-    "Autoencoders",
+    # Machine Learning Algorithms
+    "K-Nearest Neighbors (KNN) Concept",
+    "Decision Trees",
+    "Random Forest",
+    "Gradient Boosting",
+    "XGBoost",
+    "LightGBM",
+    "CatBoost",
+    "Support Vector Machines (SVM)",
+    "Naive Bayes",
+    "Linear Regression",
+    "Logistic Regression",
+    "Lasso Regression",
+    "Ridge Regression",
+    "Elastic Net",
+    "Neural Networks",
+    "Deep Learning",
+    "Convolutional Neural Networks (CNNs)",
+    "Recurrent Neural Networks (RNNs)",
+    "Long Short-Term Memory (LSTM)",
+    "Gated Recurrent Units (GRU)",
+    "Transformer Models",
     
-    # Data Processing
+    # Ensemble Learning
+    "Bagging",
+    "Boosting",
+    "Stacking",
+    "Blending",
+    "Voting Classifiers",
+    
+    # Explainability & Interpretability
+    "SHAP Values",
+    "LIME (Local Interpretable Model-agnostic Explanations)",
+    "Model Explainability",
+    "Fairness in ML",
+    
+    # Data Processing & Feature Representation
     "One-Hot Encoding",
+    "Label Encoding",
+    "Ordinal Encoding",
     "TF-IDF",
     "Word Embeddings",
     "Word2Vec",
     "GloVe",
     "Tokenization",
-    
-    # Explainability
-    "SHAP Values",
-    "LIME (Local Interpretable Model-agnostic Explanations)",
+    "Sentence Embeddings",
+    "BERT Embeddings",
     
     # Probabilistic Models
     "Bayesian Networks",
     "Hidden Markov Models (HMMs)",
+    "Gaussian Mixture Models (GMMs)",
     
-    # Graph-Based ML
+    # Graph-Based Machine Learning
     "Graph Neural Networks (GNNs)",
+    "Graph Convolutional Networks (GCNs)",
+    "Graph Attention Networks (GATs)",
     
     # Generative Models
     "Generative Adversarial Networks (GANs)",
     "Variational Autoencoders (VAEs)",
+    "Diffusion Models",
+    
+    # Reinforcement Learning
+    "Markov Decision Processes (MDP)",
+    "Q-Learning",
+    "Deep Q Networks (DQN)",
+    "Policy Gradient Methods",
+    "Actor-Critic Methods",
+    "Proximal Policy Optimization (PPO)",
+    "Monte Carlo Tree Search",
+    
+    # Advanced Topics
+    "Self-Attention",
+    "Transformers in NLP",
+    "Few-Shot Learning",
+    "Zero-Shot Learning",
+    "Contrastive Learning",
+    "Neural Architecture Search (NAS)",
+    "Federated Learning",
+    "Edge AI",
+    "Quantum Machine Learning",
 ]
 
 

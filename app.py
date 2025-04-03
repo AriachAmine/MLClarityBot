@@ -110,7 +110,18 @@ def process_response_with_mermaid(response):
         
         # Display the Mermaid diagram with full width
         st.write("### Diagram:")
-        st_mermaid(mermaid_code, width="100%")
+        
+        try:
+            # Basic validation of Mermaid syntax
+            if not any(mermaid_code.strip().startswith(prefix) for prefix in ['graph ', 'flowchart ', 'sequenceDiagram', 'classDiagram', 'stateDiagram', 'erDiagram', 'gantt', 'pie']):
+                raise ValueError("Invalid Mermaid diagram type")
+            
+            # Attempt to render the diagram
+            st_mermaid(mermaid_code, width="100%")
+        except Exception as e:
+            st.error(f"Could not render the diagram due to a syntax error. Showing the diagram code instead.")
+            # Show the code as a fallback
+            st.code(mermaid_code, language="mermaid")
         
         # Display text after the Mermaid block (if any)
         if len(parts) > 2 and parts[2].strip():

@@ -58,6 +58,18 @@ INSTRUCTIONS:
 6. DO NOT mention that you're using "context" or "retrieved information" in your answer.
 7. VERY IMPORTANT - If the context mentions or implies a diagram would be helpful, create a simple Mermaid diagram code within a markdown code block (```mermaid ... ```). Keep diagrams simple (flowchart TD, comparison, etc.) Only include a diagram if it adds real value.
 
+MERMAID DIAGRAM RULES:
+- Always start with a valid diagram type: flowchart TD, flowchart LR, classDiagram, etc.
+- Use simple syntax and keep diagrams concise
+- Ensure all nodes are properly defined before they're referenced
+- For flowcharts, use this structure:
+  ```mermaid
+  flowchart TD
+    A[Start] --> B[Process]
+    B --> C[End]
+  ```
+- Test your diagram mentally to ensure it's valid Mermaid syntax
+
 CONTEXT:
 {context}
 """
