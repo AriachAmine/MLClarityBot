@@ -1,0 +1,15 @@
+## Definition
+
+Transformers are a type of neural network architecture revolutionizing Natural Language Processing (NLP). They process entire sequences of words simultaneously, unlike previous models that processed them one by one, allowing them to capture long-range dependencies between words more effectively.
+
+## Explanation
+
+Before transformers, Recurrent Neural Networks (RNNs) were dominant in NLP.  RNNs process words sequentially, meaning they consider one word at a time and its relationship to the previous word.  This is slow and struggles to capture relationships between words far apart in a sentence.  Transformers address this by using a mechanism called "self-attention."  Self-attention allows the model to weigh the importance of each word in relation to every other word in the input sentence *at the same time*.  This parallel processing enables the model to understand the context of each word much more comprehensively, leading to significant improvements in accuracy for tasks like translation, text summarization, and question answering.  The core of this is the "attention" mechanism, which assigns weights to different parts of the input, effectively focusing on the most relevant words for understanding the meaning.  This is achieved through matrices of weights learned during training.
+
+## Analogy
+
+Imagine translating a sentence from English to French.  Previously, you might translate word by word (like an RNN), missing the overall sentence structure.  A transformer is like looking at the entire English sentence at once, understanding the relationships between all words (subject, verb, object, etc.), and then constructing the French sentence based on this holistic understanding.  It's a parallel approach, rather than a sequential one.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would show the input sentence (a sequence of words) entering the transformer. The flowchart would then depict the self-attention mechanism processing all words simultaneously to generate weighted relationships between them.  Finally, the flowchart shows the output (e.g., translation, summary, answer) being generated based on this contextualized understanding.  The key components would be the input sequence, the self-attention layer, and the output.

@@ -1,0 +1,15 @@
+## Definition
+
+Support Vector Machines (SVMs) are a powerful type of machine learning algorithm used for both classification and regression tasks.  At its core, an SVM aims to find the optimal hyperplane that best separates data points into different classes.
+
+## Explanation
+
+Imagine you have data points scattered on a piece of paper, each belonging to one of two categories (e.g., cats and dogs).  An SVM's goal is to draw a line (in 2D) or a hyperplane (in higher dimensions) that maximally separates these points.  This line/hyperplane is chosen to be as far as possible from the closest data points of each category. These closest points are called "support vectors," and they define the margin – the distance between the hyperplane and the nearest data points.  A larger margin generally means a more robust and accurate model, less prone to overfitting (where the model performs well on training data but poorly on new data).  SVMs can handle complex, non-linearly separable data through the use of kernel functions, which map the data into a higher-dimensional space where separation becomes easier.
+
+## Analogy
+
+Think of a farmer wanting to build a fence to separate two types of crops.  The ideal fence would be placed such that it’s equidistant from both crops, creating the largest possible buffer zone. The plants closest to the fence are the "support vectors," and the fence itself is the "hyperplane." The farmer wants the widest possible buffer zone to prevent accidental mixing of the crops.  This buffer zone is analogous to the margin in an SVM.
+
+## Diagram Suggestion
+
+A simple 2D scatter plot would be helpful.  The plot should show data points of two different classes (e.g., circles and squares).  The plot should then include a line representing the optimal hyperplane found by the SVM.  The support vectors (the closest data points to the hyperplane) should be clearly marked.  This visualization would directly illustrate the concept of the margin and support vectors.

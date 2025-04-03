@@ -1,0 +1,17 @@
+## Definition
+
+Deep learning is a subfield of machine learning that uses artificial neural networks with multiple layers (hence "deep") to analyze data and extract complex patterns.  It enables computers to learn from vast amounts of data without explicit programming of every rule.
+
+## Explanation
+
+Deep learning algorithms are inspired by the structure and function of the human brain.  These "neural networks" consist of interconnected nodes (neurons) organized into layers.  Data is fed into the input layer, processed through hidden layers where features are extracted and transformed, and finally, an output layer provides the result (e.g., classification, prediction).  Each connection between neurons has a weight, representing the strength of the connection.  The learning process involves adjusting these weights based on the network's performance on training data, a process called backpropagation.  The more layers a network has, the more complex patterns it can learn.  Deep learning excels at tasks like image recognition, natural language processing, and speech recognition, where traditional machine learning methods struggle.  Its success stems from its ability to automatically learn hierarchical representations of data, progressively extracting higher-level features from lower-level ones.
+
+
+## Analogy
+
+Imagine a child learning to identify different types of dogs.  Initially, they might focus on simple features like size and fur color.  As they see more dogs, they learn to identify more subtle features like ear shape and muzzle length, combining these features to distinguish breeds like Golden Retrievers and German Shepherds.  Deep learning works similarly.  The initial layers of the network might detect basic features in an image (edges, colors), while deeper layers combine these features to recognize more complex patterns (shapes, objects), ultimately leading to the identification of a specific dog breed.
+
+
+## Diagram Suggestion
+
+A simple layered diagram would be helpful.  It should show the input layer (raw data), several hidden layers (each progressively extracting more complex features), and the output layer (the prediction or classification).  Arrows connecting the layers would represent the flow of information and the weights associated with each connection could be visually represented by varying arrow thickness (thicker arrow = stronger connection).  This visual would clearly demonstrate the hierarchical nature of feature extraction in deep learning.

@@ -1,0 +1,17 @@
+## Definition
+
+SHAP (SHapley Additive exPlanations) values are a game-theoretic approach to explain the output of any machine learning model.  They quantify the contribution each feature makes to a model's prediction for a single instance.
+
+## Explanation
+
+Imagine your machine learning model predicts the price of a house.  SHAP values break down that prediction, showing how much each feature (e.g., square footage, number of bedrooms, location) contributed to the final price.  It does this by considering all possible combinations of features and assigning a "fair" contribution to each based on its impact across these combinations.  This "fairness" is based on the Shapley value from game theory, ensuring that the contributions add up to the total prediction difference from a baseline.  Importantly, SHAP values provide both the magnitude and direction (positive or negative) of each feature's influence. This allows for a much more nuanced understanding of why a model made a particular prediction than simply looking at feature importance scores alone.
+
+
+## Analogy
+
+Think of a team winning a sports game.  Each player contributes differently to the victory.  SHAP values are like assigning credit to each player based on their performance and how it impacted the overall win.  A star player might have a large positive SHAP value, while a player who made a crucial mistake might have a significant negative value.  The sum of all players' contributions (SHAP values) reflects the overall team success (the model's prediction).  Unlike simply looking at individual stats (feature importance), SHAP values account for the interplay between players (features) to give a more accurate picture of individual contribution.
+
+
+## Diagram Suggestion
+
+A simple bar chart would be useful. The x-axis would represent the features, and the y-axis would show their corresponding SHAP values.  Positive values would be shown above the zero line, indicating a positive contribution to the prediction, while negative values would be below, indicating a negative contribution. The length of each bar visually represents the magnitude of the feature's impact.  This allows for a quick and intuitive understanding of which features had the largest positive and negative influences on the model's prediction for a given instance.

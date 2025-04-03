@@ -1,0 +1,22 @@
+## Definition
+
+Multi-label classification is a machine learning task where each instance (data point) can be assigned to *multiple* classes or categories simultaneously.  Unlike single-label classification where an instance belongs to only one class, multi-label classification allows for richer and more nuanced predictions.
+
+## Explanation
+
+In multi-label classification, the model learns to predict a set of labels for each input.  This differs from single-label classification, where the model predicts just one label.  For example, an image could be simultaneously classified as "cat," "fluffy," and "indoor."  The model needs to learn the complex relationships between these labels and the features of the input data.  This often involves techniques that go beyond simple one-vs-rest approaches (training separate classifiers for each label).  Instead, methods like binary relevance (training a separate classifier per label) or more sophisticated approaches like label powerset (treating each unique combination of labels as a separate class) are employed.  The choice of method depends on the nature of the data and the relationships between labels.
+
+## Analogy
+
+Imagine a music tagging system for songs. A single song can be classified into multiple genres. For example, a song might be simultaneously classified as "Pop," "Electronic," and "Dance."  Each song (the instance) can have multiple genre labels (the classes).  Multi-label classification would be the machine learning task of automatically assigning these genre tags to songs based on their audio features. The system wouldn't just choose *one* genre; it would identify all relevant genres.
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  It could have two columns: "Single-Label Classification" and "Multi-Label Classification."  Each column would have rows illustrating examples of input data and their corresponding predicted labels.  For example:
+
+| Single-Label Classification | Multi-Label Classification |
+|---|---|
+| **Input:** Image of a dog  **Prediction:** Dog | **Input:** Image of a dog playing fetch **Prediction:** Dog, Outdoor, Playful |
+| **Input:** Email  **Prediction:** Spam | **Input:** Email **Prediction:** Spam, Urgent, Financial |
+
+This table visually contrasts the key difference: one label versus multiple labels assigned per instance.

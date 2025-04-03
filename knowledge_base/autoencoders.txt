@@ -1,0 +1,15 @@
+## Definition
+
+An autoencoder is a type of artificial neural network used for unsupervised learning.  It learns to efficiently encode input data into a lower-dimensional representation (a compressed version) and then decode that representation back into a reconstruction of the original input.
+
+## Explanation
+
+Autoencoders work by forcing the network to learn a compressed representation of the input data.  This is done by having a "bottleneck" layer in the network—a layer with fewer neurons than the input or output layers.  The encoder part of the network maps the input data to this bottleneck layer, creating a compressed code.  The decoder part then tries to reconstruct the original input from this compressed code.  The network is trained by minimizing the difference between the original input and the reconstructed output.  This process teaches the network to identify the most important features of the input, effectively learning a representation that captures the essence of the data.  This learned representation can then be used for various downstream tasks like dimensionality reduction, anomaly detection, and feature extraction.
+
+## Analogy
+
+Imagine you want to send a detailed picture to a friend using a limited data plan.  You use a compression algorithm (the encoder) to shrink the image size without losing too much detail. Your friend receives the compressed image and uses a decompression algorithm (the decoder) to restore it to its near-original form. The autoencoder works similarly; the encoder compresses the input data, and the decoder tries to reconstruct it from the compressed version. The success of the reconstruction depends on how well the encoder captures the essential features of the input.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would show the input data flowing into the encoder, which compresses it to a lower-dimensional representation (the bottleneck layer).  This compressed representation then flows into the decoder, which reconstructs the original data (the output). Arrows indicating the flow of data and labels for the encoder, bottleneck layer, decoder, and input/output would clarify the process.  The difference between the input and output could also be visually represented to highlight the training objective (minimizing reconstruction error).

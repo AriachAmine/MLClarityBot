@@ -1,0 +1,15 @@
+## Definition
+
+Nesterov Accelerated Gradient (NAG) is an optimization algorithm that improves upon standard gradient descent by incorporating momentum and a "lookahead" step.  This "lookahead" allows it to anticipate the direction of the gradient and adjust the update accordingly, leading to faster convergence.
+
+## Explanation
+
+Gradient descent methods iteratively adjust model parameters to minimize a loss function.  Standard gradient descent looks at the current point and takes a step in the direction of the steepest descent.  Momentum adds a component to the update that considers the previous steps, preventing oscillations and speeding up convergence. NAG takes momentum a step further.  Before calculating the gradient, it first takes a "lookahead" step using the current momentum.  The gradient is then calculated at this *lookahead* point, not the current point. This "lookahead" allows NAG to avoid making large updates in directions where the gradient will soon change drastically, resulting in more stable and efficient convergence.  Essentially, it's like looking ahead before taking a step to avoid running into a wall.
+
+## Analogy
+
+Imagine you're hiking down a mountain in a fog.  Standard gradient descent is like taking small, cautious steps based on the immediate slope you feel under your feet. Momentum is like adding a bit of a running start, so your steps are longer and you cover ground faster.  NAG is like using a drone to scout ahead a little bit before each step. The drone (lookahead step) tells you about the terrain slightly ahead, allowing you to adjust your direction and pace, avoiding sudden drops or unexpected obstacles, and getting you to the bottom (minimum of the loss function) quicker and more smoothly.
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful. The table would compare the update steps of standard gradient descent, gradient descent with momentum, and NAG.  The columns would represent the algorithm type, and the rows would describe the steps involved in calculating the parameter update (e.g.,  "Calculate current gradient," "Update momentum," "Take a step using momentum and gradient").  This visual would clearly show how NAG's "lookahead" step differentiates it from the other methods, highlighting its key improvement.

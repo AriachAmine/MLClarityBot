@@ -1,0 +1,15 @@
+## Definition
+
+Graph Attention Networks (GATs) are a type of neural network designed to process graph-structured data.  They use attention mechanisms to learn the importance of different connections between nodes in a graph, allowing them to effectively capture complex relationships.
+
+## Explanation
+
+Unlike traditional neural networks that process data in a sequential or grid-like manner, GATs work directly with graphs.  A graph consists of nodes (representing entities) and edges (representing relationships between entities).  GATs leverage the power of *attention mechanisms*, which assign different weights to different connections between nodes.  This means that instead of treating all connections equally, the network learns which connections are more important for a given task.  For example, in a social network, the connection between close friends might be weighted higher than the connection between acquaintances. This weighted aggregation of information from neighboring nodes allows GATs to effectively learn node representations that capture the intricate structure of the graph.  This is particularly useful for tasks like node classification, link prediction, and graph classification where the relationships between data points are crucial.
+
+## Analogy
+
+Imagine you're trying to understand the importance of a person within a social network.  A simple approach would be to count their connections.  However, some connections are stronger than others.  A GAT is like a smart algorithm that analyzes the network and assigns weights to each connection based on factors like how often people interact, the strength of their relationship, etc.  It then uses these weighted connections to determine the person's overall importance within the network, giving more weight to stronger relationships.  This is analogous to how GATs assign attention weights to edges in a graph, leading to a more nuanced understanding of the graph's structure and the roles of individual nodes.
+
+## Diagram Suggestion
+
+A simple diagram showing a small graph with three nodes (A, B, C) and edges between them would be helpful.  Each edge should have a numerical weight next to it, representing the attention weight learned by the GAT.  Arrows on the edges could indicate the direction of information flow (although GATs can handle both directed and undirected graphs).  The diagram should illustrate how the attention weights differ, highlighting that some connections are deemed more important than others by the network.  This visual will help clarify how GATs differentially weight the connections between nodes, unlike simpler graph neural networks that treat all connections equally.

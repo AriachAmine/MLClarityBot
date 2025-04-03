@@ -1,0 +1,19 @@
+## Definition
+
+Recall, in the context of machine learning, specifically in classification problems, measures the ability of a model to find all the relevant cases within a dataset.  It quantifies how many of the actual positive cases the model correctly identified.
+
+## Explanation
+
+Recall is calculated as the ratio of true positives (correctly identified positive cases) to the total number of actual positives (true positives + false negatives).  A false negative occurs when the model incorrectly predicts a negative outcome when the actual outcome is positive.  A high recall score indicates that the model is good at identifying most, if not all, of the positive cases.  This is particularly important in scenarios where missing positive cases has serious consequences, such as in medical diagnosis (missing a disease) or fraud detection (missing fraudulent transactions).  A low recall suggests the model is missing many actual positive cases.  Recall is often used in conjunction with precision (which measures the accuracy of positive predictions) to get a complete picture of a model's performance.
+
+## Analogy
+
+Imagine you're searching for all the red marbles in a large jar filled with marbles of various colors.  Recall is like measuring how many of the *actual* red marbles you successfully found.  If you missed several red marbles while searching, your recall is low, even if you didn't pick up many non-red marbles (high precision).  A high recall would mean you found almost all the red marbles, even if you also picked up a few that weren't red (lower precision).
+
+## Diagram Suggestion
+
+A simple 2x2 confusion matrix is helpful.  The matrix would have the following components:
+
+*   **Top Row Labels:** Predicted Positive, Predicted Negative
+*   **Left Column Labels:** Actual Positive, Actual Negative
+*   **Cells:**  Each cell would contain the count of instances falling into that combination (e.g., True Positives, False Positives, False Negatives, True Negatives).  Recall would be calculated using the values in the "Actual Positive" row.  Specifically, Recall = True Positives / (True Positives + False Negatives).

@@ -1,0 +1,15 @@
+## Definition
+
+Ensemble learning is a powerful machine learning technique that combines multiple individual models (often called "weak learners") to create a stronger, more accurate predictive model.  This combined model typically outperforms any single constituent model.
+
+## Explanation
+
+Instead of relying on a single model's prediction, ensemble learning leverages the collective wisdom of many.  These individual models can be of the same type (e.g., all decision trees) or different types (e.g., a combination of decision trees, support vector machines, and neural networks).  The predictions from these individual models are then aggregated (e.g., by averaging, voting, or weighted averaging) to produce a final prediction.  The key is that the weaknesses of individual models are often offset by the strengths of others, leading to improved accuracy, robustness, and reduced overfitting (where a model performs well on training data but poorly on new, unseen data).  Common ensemble methods include bagging (Bootstrap Aggregating), boosting, and stacking.
+
+## Analogy
+
+Imagine you're trying to decide which movie to watch. Instead of relying on just one friend's recommendation, you ask several friends.  Some might have similar tastes, while others might have different preferences. By considering everyone's opinion, you're more likely to choose a movie that a majority will enjoy.  Each friend represents a weak learner, and the final decision (the movie chosen) is the ensemble's prediction, which is more likely to be a good choice than relying on any single friend's recommendation.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would show the input data branching off to multiple individual models (e.g., Model A, Model B, Model C). Each model produces its own prediction. These individual predictions then converge at a "Aggregator" box, which combines the predictions (e.g., through averaging or voting). Finally, an output box shows the final ensemble prediction.  This illustrates the parallel processing and combining of predictions that are the essence of ensemble learning.

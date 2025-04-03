@@ -1,0 +1,15 @@
+## Definition
+
+Contrastive learning is a self-supervised learning technique that learns representations by comparing similar and dissimilar data points.  It aims to pull similar data points closer together in a feature space while pushing dissimilar ones further apart.
+
+## Explanation
+
+Imagine you're trying to teach a computer to recognize cats.  Instead of providing labeled images (e.g., "this is a cat"), contrastive learning works by showing the computer pairs of images.  Some pairs are of the same cat (or similar cats), while others are of a cat and something completely different (e.g., a dog).  The algorithm learns to embed these images into a feature space where similar images have nearby representations and dissimilar images are far apart.  This process doesn't require explicit labels for each image; the similarity/dissimilarity between pairs is enough to learn meaningful representations.  These learned representations can then be used for downstream tasks like image classification or object detection, often achieving performance comparable to or even exceeding supervised methods.  Crucially, it leverages the inherent structure within unlabeled data, making it a powerful technique for situations where labeled data is scarce or expensive to obtain.
+
+## Analogy
+
+Think of organizing a library.  You want to group similar books together (e.g., all science fiction novels in one section, all history books in another).  Contrastive learning is like telling the librarian: "These two books are similar (both science fiction), put them close together.  This science fiction book and this cookbook are very different; place them far apart."  Over time, the librarian (the algorithm) learns to organize the books (data points) based on their similarity, even without knowing the specific genre of each book beforehand.  The final organization is the learned representation, which can later be used to easily find specific types of books.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would show two inputs (images A and B), a comparison block determining if they are similar or dissimilar (based on pre-defined criteria or augmentations), and then two paths: one leading to a "pull closer" operation in the embedding space if similar and another to a "push further" operation if dissimilar.  Finally, it would show the resulting embedding space with clustered similar points and separated dissimilar points.  The flowchart would visually represent the core contrastive learning process.

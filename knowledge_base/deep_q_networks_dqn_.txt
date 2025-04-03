@@ -1,0 +1,23 @@
+## Definition
+
+Deep Q Networks (DQN) are a type of reinforcement learning algorithm that uses a deep neural network to learn an optimal policy for interacting with an environment.  Essentially, it learns to make the best decisions over time to maximize a reward.
+
+## Explanation
+
+Reinforcement learning focuses on an agent learning to act in an environment by trial and error.  The agent receives rewards for good actions and penalties for bad ones.  DQN uses a deep neural network, a complex system inspired by the human brain, to approximate the *Q-function*.  The Q-function estimates the expected future reward an agent will receive for taking a specific action in a given state.  The network learns by repeatedly experiencing the environment, updating its Q-function estimates based on the rewards it receives.  This process, called Q-learning, involves comparing the predicted reward with the actual reward received and adjusting the network's weights to improve its predictions.  The better the network's predictions, the better it can choose actions to maximize its overall reward.
+
+## Analogy
+
+Imagine a robot learning to navigate a maze.  The robot (agent) receives a reward (e.g., +1) when it reaches the exit and a penalty (e.g., -0.1) for each step it takes.  The DQN acts like a brain for the robot.  It learns to associate each location (state) in the maze with the best direction (action) to take to reach the exit quickly (maximize reward).  Initially, the robot might wander randomly, but over time, the DQN learns to predict which actions lead to the best outcomes, guiding the robot efficiently through the maze.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would show:
+
+1.  **Agent observes the environment state.** (Input to the DQN)
+2.  **DQN selects an action based on its current Q-function estimate.** (Output from the DQN)
+3.  **Agent takes the action and receives a reward and a new state.** (Feedback to the DQN)
+4.  **DQN updates its Q-function based on the reward and the new state.** (Learning process)
+5.  **Repeat steps 1-4.** (Iterative learning)
+
+This flowchart visually represents the cyclical process of interaction, action selection, and learning that defines DQN.

@@ -1,0 +1,15 @@
+## Definition
+
+Supervised learning is a type of machine learning where an algorithm learns from a labeled dataset.  This means the data includes both the input features and the desired output, allowing the algorithm to learn the mapping between them.
+
+## Explanation
+
+In supervised learning, we feed the algorithm a dataset containing many examples, each with its input features and the corresponding correct output (the "label"). The algorithm analyzes these examples to identify patterns and relationships between the inputs and outputs.  The goal is to build a model that can accurately predict the output for new, unseen inputs.  This is achieved through a process of training, where the algorithm adjusts its internal parameters to minimize the difference between its predictions and the actual labels in the training data.  Different algorithms (like linear regression, decision trees, or support vector machines) are used depending on the type of data and the prediction task (e.g., classification or regression).
+
+## Analogy
+
+Imagine you're teaching a child to identify different types of fruits. You show them many pictures of apples, oranges, and bananas, labeling each picture with the correct fruit name.  The child observes the features of each fruit (shape, color, size) and learns to associate those features with the correct label.  Eventually, when shown a new picture of a fruit, they can predict its type based on their learned associations.  This is analogous to supervised learning, where the pictures are the input data, the fruit names are the labels, and the child's learning process is the algorithm's training.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would start with a labeled dataset as the input.  The flowchart would then show the dataset being fed into a chosen supervised learning algorithm (e.g., a box labeled "Training Algorithm").  An arrow would lead from the algorithm to a trained model.  Finally, an arrow would show the trained model receiving new, unlabeled input data and producing predictions as the output.  This visualizes the process of training and then using the resulting model for prediction.

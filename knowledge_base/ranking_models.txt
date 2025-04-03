@@ -1,0 +1,15 @@
+## Definition
+
+Ranking models are machine learning algorithms that don't just predict a single outcome, but instead order a set of items based on their predicted relevance or preference.  They focus on the relative order of items rather than their absolute scores.
+
+## Explanation
+
+Instead of predicting a continuous value or a class label (like in regression or classification), ranking models output a ranked list.  This is crucial when dealing with tasks where the order matters more than the individual scores.  The model learns to compare items and determine which is "better" than others based on input features.  The training data consists of sets of items, each with features, and a known "ground truth" ranking for those items. The model is then trained to minimize the difference between its predicted ranking and the true ranking.  Common algorithms used include ListNet, RankNet, and LambdaMART.  These algorithms often leverage techniques like pairwise comparisons (comparing items two at a time) or listwise approaches (considering the entire ranking simultaneously) to optimize the ranking.
+
+## Analogy
+
+Imagine a search engine.  When you search for "best Italian restaurants," the engine doesn't just find restaurants; it ranks them.  The top result is deemed the "best" based on various factors like user reviews, location, and popularity. The ranking model, in this case, learns to order restaurants based on these factors to give you the most relevant results first.  Each restaurant is an item with features (reviews, location, etc.), and the search engine's ranking is the model's output. The goal is to present the most relevant restaurants at the top of the list, even if the exact "score" of each restaurant is not precisely determined.
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  The table would have columns for "Item," "Features (e.g., review score, price),"  "Predicted Score (from Ranking Model)," and "Rank."  Rows would represent different items (e.g., restaurants), showing how the model assigns scores and then ranks them accordingly.  This visually demonstrates how the model transforms features into a ranked order.

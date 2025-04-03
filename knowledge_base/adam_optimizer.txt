@@ -1,0 +1,20 @@
+## Definition
+
+Adam (Adaptive Moment Estimation) is an optimization algorithm used in training machine learning models. It efficiently updates the model's parameters (weights and biases) to minimize the error and improve its accuracy by adapting the learning rate for each parameter.
+
+
+## Explanation
+
+Imagine you're trying to find the lowest point in a valley (the minimum of a function).  Gradient descent algorithms, like Adam, help you navigate this by repeatedly taking steps downhill.  Adam cleverly keeps track of two things:  the average direction of movement (first-order moment, similar to velocity) and the average squared movement (second-order moment, similar to acceleration). This allows it to adapt the step size for each parameter.
+
+If a parameter's direction is consistently pointing downhill, Adam takes a larger step. If the direction is fluctuating a lot, implying the parameter is near a local minimum or a saddle point, Adam reduces the step size, preventing overshooting. This adaptive learning rate is Adam's key advantage over simpler gradient descent methods.  It's particularly useful in high-dimensional spaces (many parameters) and noisy data, where simple methods can struggle.
+
+
+## Analogy
+
+Think of navigating a mountain range to find the lowest point.  A simple method might involve always heading straight downhill (gradient descent). But this method might get stuck in a local dip instead of finding the true lowest point. Adam is like a hiker with a map and compass. The compass indicates the general downhill direction (first moment), and the map shows the terrain's roughness (second moment).  This allows the hiker to adjust their step size, taking larger steps on smooth slopes and smaller steps on rocky terrain, ultimately leading them more efficiently to the lowest point.
+
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  It could compare Adam to standard gradient descent, highlighting the key difference: the adaptive learning rate. The table would have columns for "Optimizer," "Learning Rate," and "Description."  The rows would be "Gradient Descent" (constant learning rate, simple description), and "Adam" (adaptive learning rate, description emphasizing the use of first and second moments for adaptation). This visually contrasts the core feature making Adam superior.

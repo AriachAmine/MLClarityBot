@@ -1,0 +1,15 @@
+## Definition
+
+Logistic regression is a machine learning algorithm used for classification problems.  It predicts the probability of a data point belonging to a particular category by fitting a sigmoid curve to the data.
+
+## Explanation
+
+Unlike linear regression which predicts a continuous value, logistic regression predicts the probability of a categorical outcome (usually binary: yes/no, 0/1).  It does this by using a sigmoid function, which squashes the output of a linear equation into a range between 0 and 1. This output represents the probability of the input belonging to the positive class.  If the probability is above a certain threshold (usually 0.5), the algorithm classifies the input as belonging to the positive class; otherwise, it's classified as belonging to the negative class. The algorithm learns the optimal parameters of the linear equation by minimizing a cost function, often using techniques like gradient descent. This process iteratively adjusts the parameters to best fit the data and accurately predict probabilities.
+
+## Analogy
+
+Imagine you're a doctor trying to predict whether a patient will develop a certain disease based on their age and blood pressure.  Linear regression might give you a numerical score, but that's not helpful for a yes/no diagnosis. Logistic regression, however, would give you the probability of the patient developing the disease (e.g., 80% chance). You could then set a threshold (e.g., >70%) to make a diagnosis.  The age and blood pressure are the input features, and the probability of developing the disease is the predicted output, bounded between 0% and 100% by the sigmoid function.
+
+## Diagram Suggestion
+
+A simple x-y scatter plot would be helpful.  The x-axis would represent the input feature (e.g., age), and the y-axis would represent the probability of the outcome (e.g., probability of developing the disease). The sigmoid curve, which ranges from 0 to 1, would be plotted on the graph, showing how the probability changes as the input feature changes.  Data points could be plotted on the graph, and their classification (above or below the threshold) could be visually represented with different colors or symbols. This visualization clearly illustrates how logistic regression maps input features to probabilities and the role of the sigmoid function.

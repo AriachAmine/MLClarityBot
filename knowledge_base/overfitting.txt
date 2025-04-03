@@ -1,0 +1,17 @@
+## Definition
+
+Overfitting in machine learning occurs when a model learns the training data *too* well, capturing noise and random fluctuations instead of the underlying patterns.  This leads to excellent performance on the training data but poor performance on unseen data (new data the model hasn't encountered before).
+
+## Explanation
+
+Imagine you're teaching a child to identify cats. You show them many pictures of cats, highlighting features like pointy ears and whiskers.  If the child memorizes *every* detail of *each* picture (including things like the specific background or lighting), they'll likely perform perfectly on those pictures.  However, when shown a new picture of a cat with a different background or lighting, they might fail to recognize it because they focused on irrelevant details instead of the essential features of a cat.  This is analogous to overfitting.
+
+A machine learning model that overfits has learned the specific quirks of its training data, rather than the generalizable rules that govern the data.  This is often due to the model being too complex (too many parameters) relative to the amount of training data.  The model essentially "memorizes" the training data, leading to high training accuracy but low generalization ability – meaning it cannot accurately predict outcomes for new, unseen data.  This is a critical problem because the ultimate goal of machine learning is to make accurate predictions on *new* data, not just the data it was trained on.  Techniques like cross-validation and regularization are used to mitigate overfitting.
+
+## Analogy
+
+Think of a student cramming for an exam by memorizing every detail from the textbook, including specific wordings and examples. They might ace the exam if the questions are identical to the textbook, but fail miserably if the questions require applying the concepts in a new context.  The student overfit their study strategy to the specific exam format, failing to grasp the underlying principles. The exam questions represent new, unseen data.
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  The table would have two columns: "Training Data Performance" and "Testing Data Performance."  The rows would represent two models: one that is well-fit (high performance on both training and testing data) and one that is overfit (high performance on training data, low performance on testing data). This visually highlights the key difference between a good model and an overfit model.

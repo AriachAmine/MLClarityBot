@@ -1,0 +1,18 @@
+## Definition
+
+Diffusion models are a type of generative model that learn to create new data instances by gradually adding noise to existing data and then learning to reverse this process.  They generate images, audio, or other data by iteratively removing noise until a coherent sample is produced.
+
+
+## Explanation
+
+Imagine you have a clear photograph.  A diffusion model works by systematically adding noise to this photo, step-by-step, until it becomes pure, random noise—indistinguishable from static.  The magic is in the *reverse* process: the model learns to predict how to remove that noise in a series of steps, eventually reconstructing the original image (or generating a similar, new one).  This is achieved through a neural network trained on a large dataset of images.  The network learns a forward diffusion process (adding noise) and a reverse diffusion process (removing noise).  By starting with pure noise and applying the reverse diffusion process, the model generates a new image.  The quality of the generated data depends on the model's ability to accurately learn and reverse the noise-adding process.  This approach often produces high-quality, realistic outputs.
+
+
+## Analogy
+
+Think of a sculptor carefully chipping away at a block of marble to reveal a statue.  The forward diffusion process is like gradually covering the statue with layers of dust and grime until it's completely obscured. The reverse diffusion process is the sculptor meticulously removing the dust and grime, layer by layer, to reveal the final form.  The diffusion model is learning to "see" the statue beneath the grime and reconstruct it.
+
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful. It would show two main branches:  "Forward Diffusion Process" and "Reverse Diffusion Process."  The "Forward Diffusion Process" would show a sequence of boxes, each representing a step where increasing amounts of noise are added to an image, culminating in pure noise. The "Reverse Diffusion Process" would show a similar sequence, but in reverse, starting with noise and gradually removing it to produce a generated image. Arrows would indicate the flow of the process in each branch.

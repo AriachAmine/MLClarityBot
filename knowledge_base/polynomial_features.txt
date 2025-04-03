@@ -1,0 +1,15 @@
+## Definition
+
+Polynomial features are engineered features created by raising existing features to integer powers.  This transformation allows a linear model to learn non-linear relationships between the input features and the target variable.
+
+## Explanation
+
+Imagine you have a simple linear model trying to predict house prices based on house size.  A linear model assumes a straight-line relationship: as size increases, price increases proportionally.  However, the relationship might be more complex; a larger house might not be *proportionally* more expensive.  Polynomial features address this.  By adding features like `size^2` (size squared) and `size^3` (size cubed), we allow the model to capture curves and bends in the relationship between size and price.  Instead of a straight line, the model can now fit a curve, potentially improving accuracy.  The higher the power, the more complex the curve the model can fit.  Note that these new features are derived directly from the original features, not added as entirely new independent variables.
+
+## Analogy
+
+Think of building with LEGO bricks.  A linear model is like building a straight wall – simple and predictable.  Polynomial features are like adding curves and arches to your LEGO creation.  You still use the same basic bricks (original features), but by arranging them differently (raising them to powers), you create a far more complex and potentially more accurate structure (model prediction).  The original bricks are the foundation, but the new arrangements allow for much more nuanced designs.
+
+## Diagram Suggestion
+
+A simple scatter plot would be helpful. The x-axis would represent the original feature (e.g., house size), and the y-axis would represent the target variable (e.g., house price).  The plot would show the original data points. Then, overlay a straight line representing a simple linear model's prediction and a curved line representing a model that uses polynomial features (e.g., including `size^2`). This visual contrast clearly shows how polynomial features allow the model to fit non-linear relationships far better than a linear model alone.

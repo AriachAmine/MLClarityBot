@@ -1,0 +1,21 @@
+## Definition
+
+Fairness in Machine Learning (ML) refers to the creation and deployment of ML systems that do not discriminate against or unfairly disadvantage specific groups of people.  It ensures that the outcomes of an ML model are equitable and just across different demographics.
+
+## Explanation
+
+ML models are trained on data, and if that data reflects existing societal biases, the model will likely perpetuate and even amplify those biases.  For example, if a facial recognition system is trained primarily on images of light-skinned individuals, it may perform poorly on darker-skinned individuals, leading to unfair or inaccurate outcomes. This is because the algorithm learns patterns from the data it's given, and biased data produces biased results.  Fairness in ML aims to mitigate these biases through careful data collection, model design, and evaluation techniques.  This involves understanding and addressing potential biases throughout the entire ML lifecycle, from data collection to deployment and monitoring.
+
+## Analogy
+
+Imagine a judge using a biased scale to weigh evidence in court cases.  If the scale consistently tips towards one side (e.g., always favors the prosecution), regardless of the actual evidence, the outcomes will be unfair. Similarly, a biased ML model, trained on biased data, will consistently produce unfair outcomes, regardless of the true underlying patterns.  Just as a fair judge needs a balanced scale, a fair ML model requires unbiased data and careful consideration of potential biases.
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  The table would have two columns: "Biased ML System" and "Fair ML System."  Rows could compare aspects like:
+
+*   **Data:**  (Biased:  Under-representation of certain groups; Fair: Representative and balanced dataset)
+*   **Model Output:** (Biased:  Discriminatory outcomes for specific groups; Fair: Equitable outcomes across all groups)
+*   **Evaluation Metrics:** (Biased:  Focus only on overall accuracy, ignoring group-specific performance; Fair:  Includes metrics like precision, recall, and F1-score for different groups)
+
+This visual comparison would clearly illustrate the key differences between a system that lacks fairness and one that strives for it.

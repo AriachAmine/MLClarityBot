@@ -1,0 +1,15 @@
+## Definition
+
+Log loss, also known as cross-entropy loss, measures the performance of a classification model whose output is a probability value between 0 and 1.  It quantifies the difference between predicted probabilities and the actual (true) class labels.
+
+## Explanation
+
+Log loss penalizes incorrect predictions more heavily than correct ones.  Imagine your model predicts a probability of 0.8 for a cat in an image, and it's actually a cat (true label = 1). The log loss will be relatively low because the prediction was quite confident and correct. However, if your model predicts 0.2 for a cat when it's actually a cat, the log loss will be much higher, reflecting the significant error in the prediction.  The further away your prediction is from the true label (0 or 1), the larger the log loss.  Minimizing log loss during model training means improving the accuracy of the model's probability predictions.  Lower log loss indicates better model performance.
+
+## Analogy
+
+Think of a weather forecaster predicting the probability of rain.  If they predict an 80% chance of rain, and it does rain, they're fairly accurate, and the "log loss" (in terms of their credibility) is low.  If they predict a 20% chance of rain, and it does rain, their prediction is far off, and their "log loss" (in terms of their perceived reliability) is high. The more inaccurate their predictions consistently are, the higher their overall "log loss" of credibility with the public.
+
+## Diagram Suggestion
+
+A simple x-y scatter plot would be helpful. The x-axis represents the predicted probability (from 0 to 1), and the y-axis represents the log loss.  You could plot multiple points, showing how log loss increases as the predicted probability deviates further from the true label (0 or 1).  For example, a point at (0.9, low log loss) would represent a highly accurate prediction, while a point at (0.1, high log loss) for a true positive would illustrate a significant error.  This visual would clearly show the relationship between predicted probability and the magnitude of log loss.

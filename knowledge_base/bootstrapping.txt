@@ -1,0 +1,18 @@
+## Definition
+
+Bootstrapping, in the context of machine learning, is a resampling technique used to create multiple datasets from a single dataset.  This is done by randomly sampling with replacement, meaning the same data point can be selected multiple times in a single resampled dataset.
+
+## Explanation
+
+Imagine you have a limited amount of data to train a machine learning model.  Bootstrapping helps you get more mileage out of that data.  It works by repeatedly creating new datasets of the same size as your original dataset.  Each new dataset is created by randomly selecting data points from the original dataset *with replacement*.  This means some data points might appear multiple times in a bootstrapped dataset, while others might be omitted entirely.
+
+Why is this useful? Because by creating many slightly different datasets, you can train multiple models on them.  This allows you to estimate the variability of your model's performance and get a better understanding of its robustness.  You can also use bootstrapping to estimate confidence intervals for your model's predictions or to improve model accuracy through techniques like bagging (Bootstrap Aggregating).  The key benefit is that you can leverage your limited data to assess the reliability and accuracy of your model more effectively.
+
+## Analogy
+
+Think of a baker who only has a limited supply of ingredients to make a cake. Instead of making one large cake, they decide to make many smaller cakes, using a slightly different combination of ingredients each time.  Some smaller cakes might use more flour than others; some might have fewer eggs. By tasting all the smaller cakes, the baker can get a better sense of the overall quality and consistency of their recipe – they can identify ingredients that are particularly important or those that can be adjusted. This is similar to bootstrapping; we're using our limited data (ingredients) to create many slightly different "models" (cakes) to better understand the overall performance.
+
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would start with a single box representing the "Original Dataset."  An arrow would lead to multiple boxes, each representing a "Bootstrapped Dataset."  Each bootstrapped dataset box would contain a note indicating "Random sampling with replacement." Finally, an arrow would point from the bootstrapped datasets to a box labeled "Model Training and Evaluation," suggesting that multiple models are trained and evaluated on these resampled datasets.

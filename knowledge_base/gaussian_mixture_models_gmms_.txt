@@ -1,0 +1,23 @@
+## Definition
+
+A Gaussian Mixture Model (GMM) is a probabilistic model that assumes that the data is generated from a mixture of several Gaussian distributions (normal distributions).  Each Gaussian represents a different cluster or subgroup within the overall data.
+
+## Explanation
+
+GMMs are used for clustering and density estimation.  Imagine you have a dataset of points scattered on a graph.  A GMM tries to find the best-fitting mixture of overlapping Gaussian "blobs" that best describes the distribution of these points. Each Gaussian has its own mean (center) and covariance (shape and spread). The model assigns a probability to each data point belonging to each Gaussian.  This allows for points to have partial membership in multiple clusters, unlike methods like k-means clustering which assign points to only one cluster. The algorithm iteratively adjusts the parameters (means, covariances, and mixing weights – the proportion of data points belonging to each Gaussian) to maximize the likelihood of observing the data given the model.
+
+The process involves:
+1. **Initialization:**  Randomly assigning initial parameters for each Gaussian.
+2. **Expectation-Maximization (EM):**  An iterative algorithm that alternates between:
+    * **Expectation (E-step):**  Estimating the probability of each data point belonging to each Gaussian based on the current parameters.
+    * **Maximization (M-step):**  Re-estimating the parameters of each Gaussian to maximize the likelihood of the data given the estimated probabilities.
+3. **Convergence:** The algorithm continues until the parameters converge, meaning they stop changing significantly.
+
+
+## Analogy
+
+Think of a bag of marbles containing red, blue, and green marbles of slightly varying sizes.  A GMM would be like trying to model the distribution of marble colors and sizes. Each Gaussian would represent one color of marbles (e.g., one Gaussian for red marbles, another for blue, etc.), with the mean representing the average size of marbles of that color and the covariance representing the variability in size. The model would then estimate the proportion of each color in the bag.
+
+## Diagram Suggestion
+
+A simple 2D scatter plot would be helpful.  Show the data points scattered across the plot.  Then, overlay several ellipses, each representing a Gaussian distribution.  The ellipses should overlap, with their centers representing the means of the Gaussians and their shapes reflecting the covariance matrices.  Different colors for the ellipses would visually represent different Gaussian components. The plot should show how the Gaussians are positioned to best "cover" the data points.

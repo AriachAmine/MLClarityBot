@@ -1,0 +1,15 @@
+## Definition
+
+Anomaly detection, also known as outlier detection, is the process of identifying data points that significantly deviate from the norm or expected pattern within a dataset.  These unusual data points are called anomalies or outliers.
+
+## Explanation
+
+Anomaly detection works by building a model that represents the "normal" behavior or characteristics of your data.  This model learns from the majority of data points, which are assumed to be typical.  Once the model is trained, it can then analyze new data points and flag those that don't fit the established pattern as anomalies.  The methods used to build these models vary greatly, ranging from simple statistical methods to complex machine learning algorithms. The importance of anomaly detection lies in its ability to reveal unusual events, errors, or fraudulent activities that might otherwise go unnoticed. This is crucial in numerous fields, including fraud detection, network security, manufacturing quality control, and medical diagnosis.  By identifying anomalies, we can proactively address potential problems, improve efficiency, and enhance safety.
+
+## Analogy
+
+Imagine you're monitoring the temperature of a factory's cooling system.  Normally, the temperature fluctuates within a specific range (e.g., 15-25°C).  Suddenly, the temperature spikes to 50°C. This extreme deviation from the usual temperature range is an anomaly.  It signals a potential problem, such as a malfunction in the cooling system, requiring immediate attention.  In this case, the "normal" temperature range represents the model learned from historical data, and the 50°C reading is the detected anomaly.
+
+## Diagram Suggestion
+
+A simple scatter plot would be helpful.  The x and y axes represent two features of the data (e.g., temperature and pressure in the factory example).  The majority of the data points would cluster together, representing the "normal" data.  The anomalies would be visually isolated points far away from the main cluster.  This visual representation clearly showcases the concept of data points deviating significantly from the norm.

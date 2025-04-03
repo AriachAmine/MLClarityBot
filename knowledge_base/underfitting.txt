@@ -1,0 +1,23 @@
+## Definition
+
+Underfitting, in machine learning, occurs when a model is too simple to capture the underlying patterns in the data.  This results in poor performance on both the training and testing datasets.
+
+## Explanation
+
+Imagine you're trying to build a model that predicts house prices based on size.  An underfitting model might simply predict the average house price regardless of size.  This is because the model is too simplistic; it hasn't learned the relationship between house size and price.  It fails to capture the nuances in the data, leading to high errors on both the data it was trained on (training error) and new, unseen data (testing error).  Underfitting usually happens when you use a model that is too basic (e.g., a linear model for highly non-linear data) or when the model doesn't have enough features (relevant information) to accurately learn the relationship.  The model is essentially "underpowered" for the task.  The solution often involves using a more complex model, adding more relevant features, or training for a longer time.
+
+## Analogy
+
+Think of trying to fit a small, straight piece of wood into a complex, curved groove. The straight piece (the simple model) simply won't fit properly (low accuracy) no matter how hard you try. You need a more flexible, bendable piece of wood (a more complex model) to accurately follow the groove's curves.  The straight piece represents an underfitting model; it's too simple to represent the complexity of the data (the curved groove).
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  The table would have two columns: "Underfitting Model" and "Well-Fitting Model."  Rows would compare characteristics like:
+
+* **Model Complexity:** Simple vs. More Complex
+* **Training Error:** High vs. Low
+* **Testing Error:** High vs. Low
+* **Accuracy:** Low vs. High
+* **Visual Representation (example):** Straight line (for simple data) vs. More complex curve (for complex data)
+
+This table clearly contrasts the behavior and performance of an underfitting model versus a properly fitting model.

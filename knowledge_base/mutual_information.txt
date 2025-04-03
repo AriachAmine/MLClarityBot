@@ -1,0 +1,17 @@
+## Definition
+
+Mutual information quantifies the amount of information two random variables share.  It measures how much knowing the value of one variable reduces uncertainty about the value of the other.
+
+## Explanation
+
+Mutual information (MI) is a key concept in information theory and is frequently used in machine learning, particularly in feature selection and independent component analysis.  It's based on the idea of entropy, which measures the uncertainty of a random variable.  High entropy means high uncertainty; low entropy means low uncertainty.
+
+MI specifically measures the reduction in uncertainty about one variable (let's call it X) given knowledge of another variable (Y).  If knowing Y tells us a lot about X, the MI is high.  Conversely, if knowing Y doesn't help us predict X, the MI is low (approaching zero).  MI is always non-negative.  A value of zero indicates complete independence between the variables.  A higher MI value suggests a stronger relationship.  Calculating MI involves comparing the joint probability distribution of X and Y with their individual probability distributions.  The formula itself involves logarithms and sums, but the core intuition is simply about how much one variable tells us about the other.
+
+## Analogy
+
+Imagine you have two weather reports: one predicts rain (variable X), and the other predicts cloud cover (variable Y).  If high cloud cover almost always means rain, then knowing the cloud cover (Y) significantly reduces your uncertainty about whether it will rain (X).  In this case, the mutual information between cloud cover and rain prediction would be high.  However, if the rain prediction is completely independent of the cloud cover report – meaning cloud cover gives you no information about rain – the mutual information would be low (close to zero).
+
+## Diagram Suggestion
+
+A simple scatter plot would be helpful. The x-axis represents variable X, and the y-axis represents variable Y.  Data points clustered along a clear line or curve indicate high mutual information (strong relationship).  If the points are randomly scattered across the plot, the mutual information is low (weak or no relationship).  The density of points in different regions further reinforces the visualization of the relationship's strength.

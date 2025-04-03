@@ -1,0 +1,15 @@
+## Definition
+
+Recurrent Neural Networks (RNNs) are a type of neural network designed to work with sequential data.  Unlike feedforward networks, RNNs possess a "memory" that allows them to consider previous inputs when processing the current input.
+
+## Explanation
+
+RNNs are particularly well-suited for tasks involving sequences because they maintain an internal state that is updated as they process each element in the sequence. This "memory" allows the network to understand context and dependencies within the data. For example, in natural language processing, understanding the meaning of a word often requires considering the words that came before it.  An RNN uses its internal state to "remember" previous words, influencing its prediction of the current word's meaning or the next word in the sequence.  This internal state is a vector of numbers that gets updated at each time step. The network learns to update this state in a way that captures the important information from the sequence.  Common applications include machine translation, speech recognition, and time series analysis.
+
+## Analogy
+
+Imagine you're reading a sentence. You don't understand each word in isolation; you understand the sentence by considering the words in order and how they relate to each other.  An RNN is like your brain while reading: it "remembers" the previous words (the context) to understand the current word and predict the next one.  Each word is a new input, and the "memory" of the previous words helps determine the meaning of the current word and what might come next.
+
+## Diagram Suggestion
+
+A simple diagram showing a basic RNN unrolled over time would be helpful. The diagram would show a series of repeating blocks (representing the RNN cell), each taking an input and its previous hidden state (memory) to produce an output and a new hidden state which is passed to the next block.  Arrows would show the flow of information, emphasizing the feedback loop from the output to the input of the next block.  Key components would include: input at each time step, hidden state (memory) at each time step, output at each time step, and the RNN cell itself.  This visualizes the sequential processing and the network's "memory" mechanism.

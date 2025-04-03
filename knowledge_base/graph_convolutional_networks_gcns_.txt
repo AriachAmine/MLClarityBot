@@ -1,0 +1,15 @@
+## Definition
+
+Graph Convolutional Networks (GCNs) are a type of neural network designed to process data represented as graphs.  They learn features from both the nodes (individual data points) and their connections (relationships) within the graph structure.
+
+## Explanation
+
+Unlike traditional convolutional neural networks (CNNs) which operate on grid-like data (like images), GCNs work with graph-structured data where relationships between data points are crucial.  A graph consists of nodes (representing data points) and edges (representing relationships between nodes). GCNs use these relationships to learn representations of the nodes.  They do this by iteratively aggregating information from a node's neighbors, effectively "convolving" information across the graph.  This allows GCNs to capture complex dependencies and patterns that are not apparent in simpler methods.  This is particularly useful for tasks like node classification (predicting properties of nodes), link prediction (predicting relationships between nodes), and graph classification (classifying entire graphs).
+
+## Analogy
+
+Imagine a social network. Each person is a node, and friendships are edges.  A GCN could be used to predict whether two people are likely to become friends (link prediction) or to identify influential people in the network (node classification).  The GCN learns by considering not only a person's individual characteristics (e.g., age, interests) but also the characteristics of their friends and friends of friends.  The "convolution" process is like each person absorbing information from their social circle, influencing their overall representation in the network.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would start with a graph as input, then show the aggregation step (gathering information from neighboring nodes), followed by a transformation step (using a neural network layer to process the aggregated information), and finally, outputting node representations or predictions.  The flowchart could visually represent the iterative nature of the process, showing how information flows and is updated across multiple layers.

@@ -1,0 +1,28 @@
+## Definition
+
+Monte Carlo Tree Search (MCTS) is a decision-making algorithm that uses simulations to evaluate possible actions in a game or problem, building a search tree based on the results of these simulations.  It's particularly effective in scenarios with large branching factors, where exploring every possibility is computationally infeasible.
+
+
+## Explanation
+
+MCTS works by iteratively building a search tree.  Each node in the tree represents a game state, and each edge represents an action.  The algorithm repeatedly performs four steps:
+
+1. **Selection:** Starting from the root node (the current game state), the algorithm traverses the tree, choosing the most promising child node based on a combination of exploration and exploitation.  This often involves a formula balancing the average reward (exploitation) and the number of visits (exploration) of each node.
+
+2. **Expansion:** If a leaf node (a state not yet explored) is reached, new child nodes are added representing possible actions from that state.
+
+3. **Simulation:** A random playout (simulation) is performed from the newly expanded leaf node until a terminal state (win, loss, or draw) is reached. The outcome of this simulation is then back-propagated up the tree.
+
+4. **Backpropagation:** The result of the simulation (win, loss, or draw) is used to update the statistics (e.g., average reward and visit count) of all nodes along the path from the leaf node back to the root.
+
+This process is repeated many times, gradually refining the search tree and improving the estimates of the value of different actions.  The algorithm ultimately selects the action leading to the child node with the highest estimated value.
+
+
+## Analogy
+
+Imagine you're trying to find the fastest route through a maze.  You can't see the whole maze at once.  MCTS is like repeatedly trying different paths, each time going a little further before randomly choosing a direction and seeing where it leads.  Each time you reach the end, you note how long it took.  Over many attempts, you gradually learn which early choices consistently lead to faster routes and focus your exploration on those promising paths. The "random choices" represent the simulations, and the "faster routes" represent better game outcomes.
+
+
+## Diagram Suggestion
+
+A simple flowchart would effectively illustrate MCTS.  The flowchart would have four main boxes representing the four steps: Selection, Expansion, Simulation, and Backpropagation.  Arrows would connect these boxes, showing the flow of the algorithm.  The Selection box could show a decision tree-like structure to highlight the choice of the next node.  The Simulation box could depict a simplified game state progression leading to a terminal outcome.

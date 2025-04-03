@@ -1,0 +1,17 @@
+## Definition
+
+Word embeddings are numerical representations of words, capturing their meaning and relationships to other words within a high-dimensional space.  Essentially, they transform words from text into vectors of numbers that a computer can understand and process.
+
+## Explanation
+
+Imagine you have a vast collection of text data.  Word embeddings are created by processing this data using algorithms like Word2Vec or GloVe. These algorithms analyze how often words appear together in sentences and paragraphs. Words that frequently appear in similar contexts will have similar numerical representations (vectors).  The more similar the contexts, the closer the vectors will be in the high-dimensional space.  This proximity reflects semantic similarity; words with similar meanings will be located closer together.  These vector representations allow machine learning models to understand the nuances of language and relationships between words, which is crucial for tasks like text classification, sentiment analysis, and machine translation.
+
+
+## Analogy
+
+Think of a city map. Each word is a building, and its location on the map (its coordinates) represents its word embedding. Buildings (words) with similar functions (meanings) – like a library and a bookstore – would be located close together on the map.  Buildings with very different functions – like a library and a fire station – would be farther apart. The map itself is the high-dimensional space, and the coordinates of each building are its vector representation.
+
+
+## Diagram Suggestion
+
+A simple 2D scatter plot would be helpful.  The X and Y axes represent two dimensions of the high-dimensional vector space (in reality, there are many more dimensions).  Each point on the plot represents a word, and its position reflects its embedding.  Words with similar meanings would cluster together, while dissimilar words would be further apart.  For example, "king," "queen," and "prince" might cluster closely, while "king" and "table" would be distant.  This visualization helps illustrate the concept of semantic similarity captured by word embeddings.

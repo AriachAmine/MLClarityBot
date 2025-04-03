@@ -1,0 +1,24 @@
+## Definition
+
+Policy gradient methods are a category of reinforcement learning algorithms that directly learn an optimal policy – a strategy for choosing actions – by improving it iteratively based on the rewards received.  They do this by adjusting the policy's parameters in the direction that increases expected cumulative reward.
+
+## Explanation
+
+Imagine you're trying to train an AI to play a game.  Instead of learning the value of each state (like in value-based methods), policy gradient methods directly learn a policy, which is a function that maps states to actions.  The policy is usually represented by a neural network whose parameters determine the probabilities of selecting different actions in each state.
+
+The learning process involves repeatedly taking actions in the environment, observing the resulting rewards, and then updating the policy's parameters.  The update rule adjusts the parameters to increase the probability of actions that led to higher rewards and decrease the probability of actions that led to lower rewards. This is achieved through gradient ascent, hence the name "policy gradient."  Crucially, the updates are guided by the gradient of the expected cumulative reward with respect to the policy's parameters.  Different policy gradient methods (e.g., REINFORCE, A2C, A3C) use various techniques to estimate this gradient efficiently and reduce variance in the updates.
+
+## Analogy
+
+Think of a salesperson trying to improve their sales pitch.  They start with a basic pitch (the initial policy).  After each presentation (interaction with the environment), they note whether they made a sale (reward).  If a sale is made, they slightly tweak aspects of their pitch that they believe contributed to the success (parameter update increasing the probability of those actions). If they fail to make a sale, they adjust their pitch to avoid the elements they think were responsible (parameter update decreasing the probability). Over time, through this iterative process of refinement based on the rewards (sales), they develop a more effective sales pitch (optimal policy).
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It could show the following steps:
+
+1.  **Initialize Policy:** Start with a randomly initialized policy (e.g., a neural network).
+2.  **Take Action:** Use the current policy to select an action in the environment.
+3.  **Observe Reward:** Receive a reward from the environment based on the action.
+4.  **Estimate Gradient:** Calculate the gradient of the expected cumulative reward with respect to the policy parameters.
+5.  **Update Policy:** Adjust the policy parameters using gradient ascent to increase the expected reward.
+6.  **Repeat:** Iterate steps 2-5 until the policy converges to an optimal or satisfactory solution.

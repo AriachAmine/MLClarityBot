@@ -1,0 +1,15 @@
+## Definition
+
+Bagging, short for Bootstrap Aggregating, is an ensemble learning method that improves the accuracy and stability of machine learning models by combining the predictions of multiple models trained on slightly different subsets of the training data.  It reduces overfitting and variance in the model's predictions.
+
+## Explanation
+
+Bagging works by creating multiple "bootstrap samples" from the original training dataset.  A bootstrap sample is a random sample of the data with replacement, meaning the same data point can be selected multiple times.  Each bootstrap sample is used to train a separate model (e.g., a decision tree).  Once all models are trained, their predictions are combined, usually by averaging the predictions for regression tasks or taking a majority vote for classification tasks. This aggregation process reduces the impact of outliers and noisy data points present in any single bootstrap sample, leading to a more robust and accurate final prediction.  The randomness introduced by bootstrapping helps the model generalize better to unseen data.
+
+## Analogy
+
+Imagine you're trying to estimate the average height of students in a school. Instead of measuring everyone, you randomly select groups of students (your bootstrap samples), measure their average height, and then average all those group averages.  Some groups might have unusually tall or short students, but by averaging many group averages, you'll get a much more reliable estimate of the overall average height than if you just measured one random group.  Each group average is like a single model's prediction in bagging, and the final average is the combined, more accurate prediction.
+
+## Diagram Suggestion
+
+A flowchart would be helpful.  It could start with the original dataset, branch into multiple paths representing the creation of bootstrap samples (each path showing a subset of the original data, possibly with some data points repeated), then show each path leading to a trained model. Finally, converge these paths to a single point representing the aggregation of predictions from all models and the final prediction. The flowchart would visually represent the process of creating multiple models from slightly different data and combining their results.

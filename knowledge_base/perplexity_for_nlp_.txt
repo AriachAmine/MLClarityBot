@@ -1,0 +1,17 @@
+## Definition
+
+Perplexity, in the context of Natural Language Processing (NLP), is a metric that measures how well a probability model predicts a sample.  Lower perplexity indicates a better model – one that more accurately predicts the probability of a given sequence of words.
+
+## Explanation
+
+Imagine you have a language model trained on a massive dataset of text.  This model learns the probabilities of different word sequences.  When you feed it a new text sample (e.g., a sentence), it assigns a probability to that sequence. Perplexity quantifies the uncertainty of the model's predictions.  It's calculated by taking the inverse probability of the sample, normalized by the number of words.  Essentially, it represents the average branching factor of the model's prediction – how many choices the model had at each word to predict the next. A lower perplexity means the model was more certain about its predictions, suggesting it's a better fit for the data.  A high perplexity indicates the model struggled to predict the text, suggesting it might not be well-suited to the type of language it's being tested on, or needs more training data.
+
+
+## Analogy
+
+Think of guessing a password. A model with low perplexity is like having a very short list of likely passwords to try. You're highly confident you'll guess the correct one quickly. A model with high perplexity is like having an incredibly long list of possibilities; you have very little confidence in quickly finding the correct password. The perplexity reflects how many "guesses" the model needs to make, on average, to predict a word.
+
+
+## Diagram Suggestion
+
+A simple x-y scatter plot would be helpful. The x-axis would represent different language models (Model A, Model B, etc.), and the y-axis would represent their perplexity scores on a test dataset.  This would visually show which model performs best (lowest perplexity) on that specific dataset.  Each point on the graph represents a model and its corresponding perplexity.  This allows for easy comparison of different models' performance.

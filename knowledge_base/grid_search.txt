@@ -1,0 +1,18 @@
+## Definition
+
+Grid Search is a technique used in machine learning to find the best combination of hyperparameters for a model.  It systematically tries every combination of hyperparameter values within a predefined range, evaluating each combination's performance to identify the optimal set.
+
+## Explanation
+
+Imagine you're building a machine learning model to predict house prices.  Your model has several "knobs" you can tweak—these are called hyperparameters.  Examples include the learning rate (how quickly the model learns), the number of trees in a random forest, or the depth of a decision tree.  Each setting of these knobs affects the model's accuracy.  Grid Search helps you find the best setting by systematically testing different combinations.
+
+You define a range of values for each hyperparameter (e.g., learning rate: 0.01, 0.1, 1; number of trees: 10, 50, 100). Grid Search then trains the model *separately* for every possible combination of these values. For example, it would train with (learning rate = 0.01, trees = 10), then (learning rate = 0.01, trees = 50), then (learning rate = 0.01, trees = 100), and so on, until it has tested all combinations.  Finally, it selects the combination that yielded the best performance (e.g., highest accuracy).  While exhaustive, it guarantees finding the best hyperparameter combination within the specified ranges.
+
+
+## Analogy
+
+Think of baking a cake. You have several ingredients (hyperparameters) like flour, sugar, and baking powder, each with different possible amounts (values).  Grid Search is like systematically trying every possible combination of ingredient amounts (e.g., 1 cup flour, 1/2 cup sugar; 1 cup flour, 1 cup sugar; 2 cups flour, 1/2 cup sugar, etc.) to find the combination that produces the best-tasting cake. Each combination is baked (model trained) and then tasted (model evaluated) before moving to the next.
+
+## Diagram Suggestion
+
+A simple table would be effective.  The columns would represent different hyperparameters (e.g., "Learning Rate," "Number of Trees"), and each row would represent a unique combination of hyperparameter values being tested.  An additional column could show the resulting model performance (e.g., "Accuracy") for that specific combination.  This table clearly visualizes the systematic exploration of the hyperparameter space by Grid Search.

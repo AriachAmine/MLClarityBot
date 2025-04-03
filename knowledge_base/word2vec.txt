@@ -1,0 +1,25 @@
+## Definition
+
+Word2Vec is a group of related models that learn vector representations of words.  These vectors capture semantic relationships between words, meaning words with similar meanings will have similar vectors.
+
+## Explanation
+
+Word2Vec works by analyzing a large corpus of text (a huge collection of text data).  It uses neural networks to learn the relationships between words based on their context.  There are two main architectures within Word2Vec: Continuous Bag-of-Words (CBOW) and Skip-gram.
+
+CBOW predicts a target word based on its surrounding words (context).  Conversely, Skip-gram predicts the surrounding words given a target word. Both methods iteratively adjust the word vectors to minimize the prediction error.  The result is a "word embedding"—a vector for each word in the vocabulary, where the distance between vectors reflects semantic similarity.  Words like "king" and "queen" will be closer together than "king" and "table" because they share contextual similarities within sentences.
+
+This is important because it allows computers to understand and process language in a more human-like way.  Instead of treating words as just strings of characters, Word2Vec allows us to represent them as numerical vectors that capture their meaning. This is crucial for various Natural Language Processing (NLP) tasks like machine translation, sentiment analysis, and text classification.
+
+## Analogy
+
+Imagine a city where each word is a building.  Word2Vec is like creating a map of this city.  Buildings (words) that are close together in the city (frequently appear together in sentences) are also close together on the map.  Buildings (words) that are far apart in the city (rarely appear together) are also far apart on the map.  The map (word embeddings) shows the relationships between the buildings (words) based on their proximity in the city (context).
+
+## Diagram Suggestion
+
+A simple diagram showing the CBOW architecture would be helpful.  It could be a flowchart with boxes representing:
+
+1.  **Input Layer:**  Showing the context words (words surrounding the target word).
+2.  **Hidden Layer:**  Representing the word vectors being processed.
+3.  **Output Layer:**  Showing the predicted target word.
+
+Arrows would indicate the flow of information from the input through the hidden layer to the output.  This visual would clearly illustrate how the model uses context words to predict the target word and how word vectors are involved in the process.

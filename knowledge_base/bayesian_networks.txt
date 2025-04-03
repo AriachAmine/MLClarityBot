@@ -1,0 +1,15 @@
+## Definition
+
+A Bayesian Network is a probabilistic graphical model that represents a set of variables and their conditional dependencies via a directed acyclic graph (DAG).  It allows us to reason about the probabilities of different events occurring, given certain evidence.
+
+## Explanation
+
+Bayesian Networks use a directed graph where nodes represent variables (like features or events) and directed edges represent conditional dependencies between those variables.  Each node has a probability distribution associated with it, which is conditional on the values of its parent nodes (nodes pointing to it).  This allows us to model complex relationships between variables in a structured way.  For example, if node A influences node B, we'd have an arrow from A to B, and the probability distribution at node B would depend on the state of node A.  The "Bayesian" part refers to the use of Bayes' theorem, which allows us to update our beliefs about the probabilities of different events as we get new evidence.  By efficiently encoding these conditional dependencies, Bayesian Networks allow for much faster and more effective probabilistic reasoning than brute-force methods.
+
+## Analogy
+
+Imagine you're trying to diagnose why your car won't start.  You might suspect a few things: a dead battery, a faulty starter motor, or no fuel.  These are your variables.  A Bayesian Network could represent these variables as nodes.  There are dependencies; a dead battery might make the starter motor less likely to work, and no fuel will definitely prevent the car from starting.  These dependencies are represented by the directed edges.  As you check things (gathering evidence, like testing the battery), you update the probabilities of each cause based on what you observe.  The network lets you combine the evidence in a principled way to figure out the most likely reason why your car won't start.
+
+## Diagram Suggestion
+
+A simple directed acyclic graph (DAG) is helpful.  The nodes represent variables (e.g., "Battery Dead," "Starter Faulty," "No Fuel," "Car Won't Start").  Arrows would show dependencies: "Battery Dead" might point to "Starter Faulty" (a dead battery increases the probability of a starter problem) and both "Battery Dead" and "No Fuel" might point to "Car Won't Start".  Each node would have associated probabilities (e.g., P(Battery Dead) = 0.1, P(Car Won't Start | Battery Dead and No Fuel) = 0.9).  The diagram visually represents how the probabilities of different events relate to each other.

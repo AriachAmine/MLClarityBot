@@ -1,0 +1,17 @@
+## Definition
+
+Graph Neural Networks (GNNs) are a type of neural network designed to work with data structured as graphs, where information is represented by nodes and their connections (edges).  They learn representations of nodes and graphs by considering both the node features and the relationships between nodes.
+
+## Explanation
+
+Unlike traditional neural networks that process data in a sequential or grid-like manner (like images), GNNs excel at handling data with complex relationships.  A graph consists of nodes (representing entities) and edges (representing relationships between entities).  GNNs process this graph data iteratively.  In each iteration, a node's representation is updated based on its own features and the features of its neighboring nodes. This allows the network to learn patterns and relationships within the graph structure.  This iterative process continues until the node representations converge, capturing the overall structure and relationships within the graph.  These learned representations can then be used for various downstream tasks like node classification, graph classification, or link prediction. For example, they can be used to predict the likelihood of two people being friends on a social network (link prediction) or to classify the type of a molecule based on its atomic structure (graph classification).
+
+
+## Analogy
+
+Imagine a social network. Each person is a node, and the friendships between them are edges. A GNN is like a detective trying to understand the network.  The detective starts by looking at each person individually (node features like age, interests). But then, the detective also looks at who each person is friends with (neighboring nodes) and considers how those friendships influence the person's characteristics.  By repeatedly considering each person's connections and characteristics, the detective builds a better understanding of each person's role and position within the entire social network.
+
+
+## Diagram Suggestion
+
+A simple diagram would be helpful.  A flowchart showing a single iteration of a GNN's message-passing process would be beneficial.  The flowchart would begin with a node and its neighbors.  The next step would depict the aggregation of information from the neighbors.  Next, it would show the update of the node's representation based on the aggregated information and its own features.  Finally, it would show the updated node representation as the output of that iteration.  Repeating this process for all nodes across multiple iterations would visually demonstrate the iterative nature of GNNs.

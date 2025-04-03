@@ -1,0 +1,17 @@
+## Definition
+
+Mean Squared Error (MSE) is a common metric used to measure the average squared difference between predicted and actual values in a machine learning model.  It quantifies how well the model's predictions match the real data.
+
+## Explanation
+
+MSE works by first calculating the difference (error) between each predicted value and its corresponding actual value.  These differences are then squared to eliminate negative values (making all errors positive contributions), and finally, the average of these squared errors is computed.  A lower MSE indicates better model performance, signifying that the model's predictions are closer to the actual values on average.  The squaring operation emphasizes larger errors, making the MSE more sensitive to outliers.
+
+Why is MSE important?  It provides a single, quantifiable number summarizing the overall accuracy of a model's predictions. This allows for easy comparison between different models or different versions of the same model. Minimizing MSE is a primary goal in many machine learning regression tasks (predicting continuous values).
+
+## Analogy
+
+Imagine you're a weather forecaster predicting daily high temperatures.  You make predictions for 7 days, and compare them to the actual high temperatures recorded.  MSE would be like calculating the average of the squared differences between your predicted temperatures and the actual temperatures for those 7 days. A smaller MSE means your temperature predictions were, on average, closer to the real temperatures.  A large MSE means your predictions were often far off the mark.
+
+## Diagram Suggestion
+
+A simple scatter plot would be helpful. The x-axis would represent the actual values, and the y-axis would represent the predicted values. Each point represents a single data point with its actual and predicted values.  The distance of each point from the diagonal line (where predicted = actual) visually represents the error for that data point.  The overall spread of the points around the diagonal line gives a visual indication of the MSE – a tighter cluster around the diagonal suggests a lower MSE.

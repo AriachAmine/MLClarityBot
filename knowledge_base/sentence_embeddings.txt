@@ -1,0 +1,15 @@
+## Definition
+
+Sentence embeddings are numerical representations of sentences, capturing their semantic meaning in a way that computers can understand.  These representations allow us to compare and contrast sentences based on their meaning, not just their individual words.
+
+## Explanation
+
+Imagine you have a vast collection of text data.  To analyze this data meaningfully, you need a way to represent each sentence as a set of numbers. Sentence embeddings achieve this.  They use complex algorithms, often based on deep learning models like transformers (like BERT or Sentence-BERT), to process sentences and generate vector representations (a list of numbers).  Sentences with similar meanings will have similar vectors, while sentences with different meanings will have dissimilar vectors.  The distance between these vectors (calculated using metrics like cosine similarity) reflects the semantic similarity between the sentences. This allows for tasks like finding similar sentences, clustering sentences by topic, or improving the accuracy of downstream tasks such as question answering and text classification.
+
+## Analogy
+
+Think of sentence embeddings as coordinates on a map. Each sentence is a location on this map, and its coordinates (the embedding vector) determine its position. Sentences with similar meanings are located close together on the map, while those with different meanings are far apart.  You can easily measure the distance between any two points (sentences) to determine their semantic similarity.
+
+## Diagram Suggestion
+
+A simple two-dimensional scatter plot would be helpful.  The x and y axes represent two dimensions of the embedding vector (in reality, these vectors are often much higher dimensional). Each point on the plot represents a sentence, and the closer the points are, the more semantically similar the sentences are.  For instance, sentences like "The cat sat on the mat" and "A feline rested on a rug" would be clustered closely together, while "The cat sat on the mat" and "The rocket launched into space" would be far apart.  This visual representation clearly demonstrates the concept of semantic similarity captured by sentence embeddings.

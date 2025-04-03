@@ -1,0 +1,17 @@
+## Definition
+
+RMSprop (Root Mean Square Propagation) is an adaptive learning rate optimization algorithm used in training neural networks. It aims to improve upon standard gradient descent by dynamically adjusting the learning rate for each weight based on the historical magnitudes of its gradients.
+
+## Explanation
+
+Standard gradient descent uses a single learning rate for all weights during training.  This can be problematic because some weights might need smaller adjustments than others.  RMSprop addresses this by maintaining a moving average of the squared gradients for each weight. This average, called the "root mean square" (RMS) of the gradients, provides a measure of the historical magnitude of the gradient for that weight.  The learning rate for each weight is then scaled down by its RMS.  Weights with consistently large gradients (meaning they're changing rapidly) will have their learning rate effectively reduced, preventing them from oscillating wildly. Conversely, weights with smaller gradients will maintain a higher effective learning rate, allowing for faster progress. This adaptive nature helps the algorithm converge faster and more stably than standard gradient descent, especially in situations with noisy or non-stationary gradients.
+
+
+## Analogy
+
+Imagine you're navigating a hilly landscape (the error surface of your neural network) trying to reach the lowest point (the optimal weights).  Standard gradient descent is like taking steps of a fixed size in the direction of steepest descent.  However, some hills are very steep and you might overshoot, while others are gentle and you'd want to take bigger steps. RMSprop is like having adjustable step size.  As you encounter steeper slopes (large gradients), you automatically reduce your step size to avoid overshooting. On gentler slopes (small gradients), your step size increases, allowing you to move faster.
+
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  It would have two columns: "Standard Gradient Descent" and "RMSprop."  Each column would then have rows describing key aspects:  "Learning Rate" (constant vs. adaptive), "Handling of Noisy Gradients" (prone to oscillations vs. more stable), and "Convergence Speed" (potentially slower vs. potentially faster). This table visually summarizes the key differences and advantages of RMSprop over standard gradient descent.

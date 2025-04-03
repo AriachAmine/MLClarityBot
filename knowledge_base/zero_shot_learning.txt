@@ -1,0 +1,15 @@
+## Definition
+
+Zero-shot learning (ZSL) is a machine learning technique that allows a model to classify objects or data it has never seen during training.  It achieves this by leveraging prior knowledge about the objects, often in the form of descriptive attributes or semantic relationships.
+
+## Explanation
+
+Imagine training a dog to recognize different breeds.  Traditional machine learning would require showing the dog many pictures of each breed (e.g., Golden Retriever, Poodle, German Shepherd) until it learns to identify them.  Zero-shot learning, however, aims to teach the dog to recognize a new breed, say a "Tibetan Mastiff," without ever showing it a single picture of that breed.  Instead, you might describe the Tibetan Mastiff using attributes like "large size," "long, thick fur," and "powerful build."  If the dog has already learned to associate these attributes with other breeds, it can use this knowledge to infer what a Tibetan Mastiff looks like and potentially identify one in a picture.  This is done by learning a mapping between the visual features of images and their semantic descriptions. The model learns to understand the relationship between the visual characteristics and the textual descriptions of different classes, even those unseen during training.  This is crucial because it significantly reduces the need for large annotated datasets, which can be costly and time-consuming to create.
+
+## Analogy
+
+Think of learning a new language. You might not have ever encountered a specific word before, but if you understand the meaning of its root words and prefixes/suffixes (prior knowledge), you can often guess its meaning accurately. Zero-shot learning is similar; it uses existing knowledge about the relationships between different concepts to infer the properties of new, unseen concepts.  The "root words" are the attributes or descriptions, and the "new word" is the unseen class.
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  The table would have two columns: "Seen Classes during Training" and "Unseen Classes (Zero-Shot)".  Each column would list examples of classes (e.g., "Golden Retriever," "Poodle" vs. "Tibetan Mastiff," "Komondor").  Below the table, a short explanation could clarify that the model uses semantic relationships (like shared attributes) to connect the seen and unseen classes, enabling classification of the unseen classes.

@@ -1,0 +1,15 @@
+## Definition
+
+Multi-task learning (MTL) is a subfield of machine learning where a single model is trained to perform multiple tasks simultaneously.  Instead of training separate models for each task, MTL leverages shared representations and knowledge across tasks to improve overall performance and efficiency.
+
+## Explanation
+
+Imagine you're training a model to recognize objects in images.  Instead of training one model to only identify cats, and another separate model to identify dogs,  MTL would train a *single* model to identify both cats *and* dogs at the same time.  This shared learning process often leads to better performance than training separate models for each task.  This is because the model learns common features relevant to both tasks (like shapes, textures, and colors) which then benefit the individual task performance.  The shared representation helps the model generalize better, particularly when data for some tasks is limited.  Essentially, the model learns more efficiently by utilizing information from related tasks.  This shared learning can lead to improved accuracy, reduced training time, and a more compact model.
+
+## Analogy
+
+Think of a student learning multiple subjects simultaneously, like math and science.  Instead of studying each subject in complete isolation, the student might find that certain problem-solving skills learned in math help them understand concepts in science, and vice-versa.  This shared understanding improves their performance in both subjects. Multi-task learning is similar; the model "learns" shared "skills" (features) across tasks, leading to better performance in each individual task.
+
+## Diagram Suggestion
+
+A simple flowchart would effectively illustrate MTL. The flowchart would begin with a single input (e.g., an image).  This input would then feed into a shared representation layer (a set of nodes representing common features learned across all tasks).  From this shared layer, multiple branches would emerge, each leading to a separate task-specific output layer (e.g., one for cat detection, one for dog detection).  The flowchart would clearly show the shared representation being used by multiple tasks, highlighting the core idea of MTL.

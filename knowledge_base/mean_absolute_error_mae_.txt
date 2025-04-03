@@ -1,0 +1,15 @@
+## Definition
+
+Mean Absolute Error (MAE) is a measure of how accurate a machine learning model's predictions are.  It represents the average absolute difference between the predicted values and the actual values.
+
+## Explanation
+
+MAE quantifies the error by calculating the absolute difference between each predicted value and its corresponding actual value.  These individual differences are then averaged to provide a single value representing the average magnitude of error.  The "absolute" part is crucial because it ignores whether the prediction was too high or too low; only the magnitude of the difference matters.  A lower MAE indicates a more accurate model, as it signifies smaller prediction errors on average.  Because it uses absolute differences, MAE is less sensitive to outliers (extreme values) compared to other error metrics like Mean Squared Error (MSE).
+
+## Analogy
+
+Imagine you're a weather forecaster.  Each day, you predict the high temperature, and then you compare your prediction to the actual high temperature recorded.  The MAE would be the average of the absolute differences between your predicted temperatures and the actual temperatures over a period, say a month. For example, if you predicted 75°F and it was 72°F, the absolute difference is 3°F. If you consistently get predictions with smaller absolute differences (closer to 0), your MAE will be lower, meaning you're a more accurate forecaster.
+
+## Diagram Suggestion
+
+A simple scatter plot would be beneficial. The x-axis would represent the actual values, and the y-axis would represent the predicted values. Each data point would represent a single prediction.  The ideal scenario would show all points clustered closely along a line where the predicted values equal the actual values (a diagonal line from bottom-left to top-right).  The greater the scatter of points away from this line, the higher the MAE.  Visualizing the distance of each point from this ideal line helps illustrate the concept of absolute differences being averaged to calculate MAE.

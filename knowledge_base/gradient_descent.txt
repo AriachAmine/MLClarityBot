@@ -1,0 +1,15 @@
+## Definition
+
+Gradient Descent is an iterative optimization algorithm used to find the minimum of a function.  It works by repeatedly taking steps in the direction of the steepest descent of the function's gradient.
+
+## Explanation
+
+Imagine you're standing on a mountain and want to get to the bottom (the minimum point) as quickly as possible. You can't see the whole mountain, only the immediate slope around you. Gradient Descent is like taking small steps downhill, always choosing the direction that leads to the steepest descent.  You calculate the slope (the gradient) at your current location, then take a step in the opposite direction of the slope. You repeat this process, gradually moving closer to the bottom of the mountain (the minimum of the function).  The size of each step is controlled by a parameter called the learning rate.  A smaller learning rate means smaller, more precise steps, while a larger learning rate means larger, potentially faster but less precise steps.  The algorithm stops when it reaches a point where the slope is essentially flat, indicating that it's (hopefully) very close to the minimum.
+
+## Analogy
+
+Imagine you're trying to find the lowest point in a valley using only your sense of touch. You can feel the slope of the ground beneath your feet.  You take a step in the direction where the ground slopes downward most steeply.  You repeat this process, always stepping downhill, until you reach a point where you can't feel any more downward slope.  This is analogous to Gradient Descent, where the slope of the ground represents the gradient of the function, and your steps represent the iterative updates made by the algorithm.
+
+## Diagram Suggestion
+
+A simple 2D graph with axes representing the input parameters (e.g., x and y) and the value of the function (z-axis) would be useful.  The graph should show a curved surface representing the function.  The algorithm's path towards the minimum, as a series of steps following the negative gradient, should be clearly depicted by a line or series of arrows. This visually demonstrates the iterative nature of Gradient Descent and how it approaches the minimum.

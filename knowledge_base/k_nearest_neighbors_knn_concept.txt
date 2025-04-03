@@ -1,0 +1,15 @@
+## Definition
+
+K-Nearest Neighbors (KNN) is a simple, supervised machine learning algorithm used for both classification and regression.  It classifies a new data point based on the majority class among its 'k' nearest neighbors in the feature space.
+
+## Explanation
+
+KNN works by calculating the distance between a new data point and all existing data points in a dataset.  These existing data points are already labeled with their respective classes (in classification) or values (in regression).  The algorithm then identifies the 'k' closest data points (neighbors) to the new point.  For classification, the new point is assigned the class that is most frequent among its 'k' nearest neighbors. For regression, the new point's value is predicted as the average (or weighted average) of the values of its 'k' nearest neighbors.  The choice of 'k' is a crucial hyperparameter; a larger 'k' can smooth out noise but might blur class boundaries, while a smaller 'k' is more sensitive to individual data points and noise.  Distance is typically calculated using metrics like Euclidean distance (straight-line distance).
+
+## Analogy
+
+Imagine you're choosing a new restaurant. You have a map showing the location of various restaurants, and each is labeled with a rating (e.g., 1-5 stars). KNN is like asking your 3 closest friends (k=3) which restaurants they recommend. You'd then choose the restaurant with the highest average rating among those 3 recommendations.  The location of restaurants on the map represents the features of your data points, and the star rating represents the class label.  Your choice of restaurant is analogous to the classification of a new data point.
+
+## Diagram Suggestion
+
+A simple scatter plot would be helpful.  The x and y axes represent two features of the data (e.g., price and quality for restaurants).  Each point on the plot represents a data point (restaurant) with its class (star rating) indicated by color or shape.  A new data point (your location) can be plotted, and circles can be drawn around its k nearest neighbors to visually show how the algorithm determines its class.

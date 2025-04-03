@@ -1,0 +1,15 @@
+## Definition
+
+Regression is a type of machine learning used to predict a continuous value.  It finds relationships between variables to create a model that estimates an output based on input features.
+
+## Explanation
+
+In simpler terms, regression helps us answer "how much?" questions. Instead of classifying things into categories (like "cat" or "dog"), regression predicts a numerical value.  For example, we might use regression to predict the price of a house based on its size, location, and age.  The algorithm analyzes historical data (house sizes, locations, ages, and their corresponding prices) to learn the relationship between these features and the price.  Once trained, the model can estimate the price of a new house given its characteristics.  Different regression techniques exist (linear regression, polynomial regression, etc.), each suitable for different types of relationships between variables. The goal is to find the best-fitting line or curve that minimizes the difference between the model's predictions and the actual values.  This difference is often measured using metrics like Mean Squared Error (MSE).
+
+## Analogy
+
+Imagine you're trying to predict a farmer's yield of corn based on the amount of rainfall they receive. You collect data from previous years, plotting rainfall (x-axis) against corn yield (y-axis).  You'll likely see a trend: more rainfall generally leads to a higher yield. Regression helps you draw a line (or curve) through these data points that best represents this relationship.  This line then allows you to estimate the corn yield for a given amount of rainfall, even if you haven't seen that specific rainfall amount before.  The line's equation represents the model, allowing for predictions.
+
+## Diagram Suggestion
+
+A simple scatter plot with a regression line is essential. The x-axis represents the input feature (e.g., rainfall), and the y-axis represents the output (e.g., corn yield). Each point on the scatter plot represents a data point (rainfall and corresponding yield).  The regression line is drawn through the points, aiming to minimize the distance between the line and the points.  This line visually represents the model's prediction of the output for any given input.

@@ -1,0 +1,16 @@
+## Definition
+
+R-squared (R²) is a statistical measure that represents the proportion of the variance for a dependent variable that's predictable from the independent variable(s).  In simpler terms, it tells us how well a regression model fits the observed data.
+
+## Explanation
+
+R² ranges from 0 to 1 (or 0% to 100%).  A higher R² indicates a better fit.  An R² of 0 means the model explains none of the variability in the dependent variable; the independent variables are not helpful in predicting the outcome. An R² of 1 means the model explains all the variability; the independent variables perfectly predict the outcome.  In reality, most models fall somewhere in between.  It's important to remember that a high R² doesn't automatically mean the model is good; it could be overfitting the data (fitting the noise, not the underlying trend).  Overfitting occurs when a model is too complex and learns the specific details of the training data rather than the general patterns.  Therefore, R² should be considered alongside other evaluation metrics to assess the overall quality of a model.
+
+
+## Analogy
+
+Imagine you're trying to predict the height of sunflowers based on the amount of sunlight they receive. You collect data and create a model.  If your model has an R² of 0.8 (or 80%), it means that 80% of the variation in sunflower height can be explained by the amount of sunlight they receive.  The remaining 20% is due to other factors (like water, soil quality, etc.) that your model doesn't account for.  A higher R² indicates that sunlight is a strong predictor of sunflower height, while a lower R² suggests other factors play a more significant role.
+
+## Diagram Suggestion
+
+A simple scatter plot is useful.  The x-axis would represent the independent variable (e.g., sunlight), and the y-axis would represent the dependent variable (e.g., sunflower height). The data points would show individual sunflower measurements.  A line of best fit (regression line) would be drawn through the points.  The closer the data points cluster around this line, the higher the R².  The diagram could visually show how much of the variation is explained by the line (higher R²) versus how much is unexplained (scatter around the line; lower R²).

@@ -1,0 +1,15 @@
+## Definition
+
+Clustering is an unsupervised machine learning technique that groups similar data points together into clusters.  The goal is to find inherent structure within the data without pre-defined labels.
+
+## Explanation
+
+Clustering algorithms analyze datasets based on the inherent similarities between data points.  These similarities are often measured using distance metrics (e.g., Euclidean distance).  Points closer together are considered more similar and are grouped into the same cluster.  The number of clusters can be predetermined or determined automatically by the algorithm.  The resulting clusters reveal underlying patterns and structures in the data, helping us to understand the data better and make predictions or classifications based on cluster membership.  Different clustering algorithms employ different approaches to achieve this grouping, each with strengths and weaknesses regarding efficiency and the types of data they handle well.
+
+## Analogy
+
+Imagine a party where you don't know anyone.  You naturally start talking to people who share similar interests or have similar backgrounds.  Over time, several smaller groups form, each with people who have things in common.  Clustering is similar; it automatically groups data points (people at the party) into clusters (smaller groups) based on their similarities (shared interests or backgrounds).  The algorithm acts like the invisible force that facilitates this grouping.
+
+## Diagram Suggestion
+
+A simple scatter plot is helpful.  The x and y axes represent two features of the data (e.g., height and weight).  Each data point is plotted as a dot.  Different colored regions visually delineate the clusters, showing how points with similar values of the two features are grouped together.  The closer the points are to each other within a cluster, the more similar they are.  The separation between clusters indicates dissimilarity.

@@ -1,0 +1,29 @@
+## Definition
+
+A decision tree is a flowchart-like structure used in machine learning to visually and explicitly represent decisions and their possible consequences.  It's a predictive model that maps observations about an item to conclusions about the item's target value.
+
+## Explanation
+
+Decision trees work by recursively partitioning the data based on the values of different features.  Starting at the root node (the top), each node represents a test on a feature (e.g., "Is the fruit red?"), and each branch represents the outcome of the test (e.g., "Yes" or "No").  This process continues until we reach a leaf node, which represents a prediction or classification (e.g., "Apple," "Orange").  The goal is to build a tree that accurately predicts the target variable based on the input features.  The process of building the tree involves selecting the best features at each node to maximize the separation of different classes or to minimize prediction error.  This selection often uses metrics like Gini impurity or information gain.  Decision trees are popular because they are relatively easy to understand and interpret, making them valuable for both prediction and understanding the underlying data.
+
+
+## Analogy
+
+Imagine you're trying to identify a type of fruit based on its characteristics.  A decision tree would be like a flowchart guiding you:
+
+1. **Root Node:** "Is the fruit round?"
+2. **Branch 1 (Yes):** "Is the fruit red?"  (Leads to Apple or Cherry)
+3. **Branch 2 (No):** "Is the fruit long and yellow?" (Leads to Banana)
+
+Each question is a node, and the answers lead to further questions or final classifications (leaf nodes). This process mimics how a decision tree works by sequentially applying tests to arrive at a prediction.
+
+
+## Diagram Suggestion
+
+A flowchart is the ideal diagram to represent a decision tree.  The key components would be:
+
+* **Rectangular boxes:** Representing decision nodes (questions about features).
+* **Oval boxes:** Representing leaf nodes (final classifications or predictions).
+* **Arrows:** Connecting nodes and branches, showing the flow of decisions based on the test outcomes.
+
+A simple example would show a root node branching into two, each leading to further nodes or leaf nodes, creating a tree-like structure.  The text within each box would indicate the feature being tested or the final classification.

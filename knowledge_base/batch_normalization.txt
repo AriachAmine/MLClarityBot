@@ -1,0 +1,24 @@
+## Definition
+
+Batch Normalization (BN) is a technique used in neural networks to normalize the activations of each layer by adjusting their mean and standard deviation. This helps to stabilize and accelerate the training process.
+
+## Explanation
+
+During the training of a deep neural network, the distribution of activations within each layer can significantly shift as the weights are updated.  This phenomenon, often called "internal covariate shift," can slow down training and make it harder for the network to learn effectively.  Batch Normalization addresses this by normalizing the activations of a batch of data before they are passed to the next layer.  Specifically, for each feature in a batch, BN computes the mean and standard deviation across the batch. It then normalizes each feature using these statistics, effectively centering the data around zero with a standard deviation of one.  Finally, two learned parameters, a scale (`γ`) and a shift (`β`), are introduced to allow the network to learn the optimal scaling and shifting of the normalized activations.  This ensures that the network isn't restricted to only using normalized activations but can adjust them as needed.  By stabilizing the activations, BN enables the use of higher learning rates and improves the overall training stability and speed.
+
+
+## Analogy
+
+Imagine a group of runners (the activations) with varying paces.  Some are incredibly fast, others are much slower.  This makes it hard for a coach (the network) to give effective training instructions to the whole group.  Batch Normalization is like having the runners all run a standardized warm-up – a process that brings their paces closer together, ensuring everyone is starting at a similar level.  The coach can then provide more consistent and effective guidance, speeding up the overall training process.  The learned parameters (`γ` and `β`) are like allowing the coach to adjust the warm-up intensity for each runner individually, allowing for optimal performance.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It could show the following steps:
+
+1. **Input Batch:** A batch of activations enters.
+2. **Calculate Mean & Standard Deviation:** The mean and standard deviation are computed for each feature across the batch.
+3. **Normalize:** Each feature is normalized using the calculated mean and standard deviation.
+4. **Scale & Shift:** The normalized activations are scaled by `γ` and shifted by `β`.
+5. **Output:** The normalized and scaled activations are passed to the next layer.
+
+This flowchart visually represents the sequence of operations involved in batch normalization.

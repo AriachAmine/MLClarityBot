@@ -1,0 +1,15 @@
+## Definition
+
+Convolutional Neural Networks (CNNs) are a specialized type of artificial neural network designed to process data with a grid-like topology, such as images and videos. They excel at identifying patterns and features within this data through a process called convolution.
+
+## Explanation
+
+CNNs work by using multiple layers to extract increasingly complex features from input data. The first layers detect basic features like edges and corners. Subsequent layers combine these basic features to identify more complex patterns, like shapes or textures.  This hierarchical feature extraction is what makes CNNs so powerful for image recognition and related tasks. The "convolution" part refers to a mathematical operation where a small matrix (the filter or kernel) slides across the input data, performing element-wise multiplication and summing the results.  This process highlights the presence of the filter's pattern in the input.  The output of this operation is a feature map, which is then passed to the next layer.  Multiple filters are used in each layer, each detecting a different feature.  Finally, fully connected layers process the extracted features to make predictions, such as classifying an image.
+
+## Analogy
+
+Imagine you're searching for a specific face in a crowd. You wouldn't examine every pixel individually. Instead, you'd scan the crowd, looking for characteristic features like hair color, eye shape, or nose structure (basic features).  Then, you'd combine these features to identify individuals (complex patterns).  A CNN works similarly: it starts by detecting basic features in an image (edges, corners), then combines these to detect more complex features (eyes, nose), and ultimately recognizes the entire face (the object).  The filters are like your mental "feature detectors," scanning the image for specific patterns.
+
+## Diagram Suggestion
+
+A simple diagram showing the flow of information through a CNN would be beneficial.  It could be a block diagram showing the input image, then several convolutional layers (each with multiple filters), followed by pooling layers (which downsample the feature maps to reduce computation), and finally, fully connected layers leading to the output (e.g., a classification label).  Arrows would indicate the flow of data from one layer to the next.  Each block representing a layer could briefly mention the key operation performed (convolution, pooling, fully connected).

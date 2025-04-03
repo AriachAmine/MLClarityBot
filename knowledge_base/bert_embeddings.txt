@@ -1,0 +1,15 @@
+## Definition
+
+BERT embeddings are numerical representations of words and sentences, created by Google's Bidirectional Encoder Representations from Transformers (BERT) model.  These representations capture the contextual meaning of words, allowing machines to understand nuances in language far better than simpler methods.
+
+## Explanation
+
+BERT is a powerful natural language processing (NLP) model.  Instead of treating each word in isolation, BERT considers the entire sentence context to understand the meaning of each word. This "bidirectional" approach is key.  It analyzes the word based on its surrounding words, both before *and* after it in the sentence.  This contextual understanding is crucial because a word's meaning often depends heavily on its context. For example, "bank" can mean a financial institution or the side of a river.  BERT's sophisticated architecture, using "transformers," allows it to process this contextual information efficiently.  The resulting embeddings are vectors (lists of numbers) where similar words or phrases have similar vector values, reflecting their semantic relationships. These embeddings are then used as input for various downstream NLP tasks like sentiment analysis, question answering, and text classification, significantly improving their accuracy.
+
+## Analogy
+
+Imagine a library where each book is a word, and its location on the shelves represents its meaning.  A simple system might place books based only on their title.  BERT, however, is like a librarian who considers the entire content of the book and its relationship to other books when deciding where to place it. Two books might have similar titles but vastly different content; BERT's system would reflect this difference in their shelf locations (embeddings), allowing for more accurate retrieval based on meaning.
+
+## Diagram Suggestion
+
+A simple comparison table would be helpful.  The table would have two columns: "Word" and "BERT Embedding (Simplified)".  The "Word" column would list a few words with different meanings depending on context (e.g., "bank," "bat," "run"). The "BERT Embedding (Simplified)" column would show a short, simplified vector representation (e.g., three numbers) for each word, demonstrating how the numbers change based on the context in which the word is used.  This would visually show how BERT captures different meanings for the same word in different contexts.  For example, "bank" in the context of finance might have a vector like [0.8, 0.2, 0.1], while "bank" in the context of a river might have a vector like [0.1, 0.8, 0.2].  This illustrates the contextualized nature of BERT embeddings.

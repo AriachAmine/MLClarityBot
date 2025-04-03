@@ -1,0 +1,21 @@
+## Definition
+
+Precision in machine learning measures the accuracy of positive predictions.  Specifically, it quantifies the proportion of correctly predicted positive instances out of all instances *predicted* as positive.
+
+## Explanation
+
+Imagine your machine learning model is trying to identify spam emails.  Precision answers the question: "Of all the emails my model flagged as spam, what percentage were actually spam?"  A high precision means that when the model predicts something is spam, it's usually right.  A low precision means the model frequently mislabels non-spam emails as spam.  It's crucial because a low precision, even with high accuracy overall, can lead to many false positives, which can be costly or inconvenient (e.g., important emails being sent to junk).  Precision is calculated as:  `True Positives / (True Positives + False Positives)`.  True Positives are instances correctly identified as positive, while False Positives are instances incorrectly identified as positive.
+
+## Analogy
+
+Think of a police detective investigating a crime.  The detective makes several arrests (predictions).  Precision, in this context, represents the percentage of those arrested who were actually guilty.  If the detective arrests 10 people, and only 8 are guilty, their precision is 80% (8/10).  A high precision means the detective is good at identifying the truly guilty, making fewer wrongful arrests (false positives).  A low precision indicates many innocent people are being arrested.
+
+## Diagram Suggestion
+
+A simple 2x2 confusion matrix is helpful. It would have the following components:
+
+* **Rows:** Actual Class (Positive/Negative)
+* **Columns:** Predicted Class (Positive/Negative)
+* **Cells:**  The counts of True Positives (correctly predicted positive), True Negatives (correctly predicted negative), False Positives (incorrectly predicted positive), and False Negatives (incorrectly predicted negative).
+
+Precision would be calculated using the values from the "Predicted Positive" column.  This visual clearly shows the relationship between the predicted positive instances and the correctly predicted positive instances, making precision calculation straightforward.

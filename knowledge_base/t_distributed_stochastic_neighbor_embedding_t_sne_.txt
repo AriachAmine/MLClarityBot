@@ -1,0 +1,20 @@
+## Definition
+
+t-Distributed Stochastic Neighbor Embedding (t-SNE) is a powerful dimensionality reduction technique used to visualize high-dimensional data in a lower-dimensional space (usually 2D or 3D) while preserving the local neighborhood structure of the data points.  It's particularly useful for exploring complex datasets and identifying clusters.
+
+## Explanation
+
+Imagine you have a dataset with hundreds or thousands of features for each data point.  It's impossible to visualize this directly. t-SNE helps by finding a lower-dimensional representation where similar data points remain close together, and dissimilar points are far apart.  It does this in two main steps:
+
+1. **Probability Modeling:**  t-SNE first calculates the probability that each data point is related to every other data point in the high-dimensional space.  Points close together have a high probability of being related, while distant points have a low probability.  This creates a probability distribution that captures the local neighborhood structure.
+
+2. **Dimensionality Reduction:**  Then, t-SNE tries to create a similar probability distribution in a lower-dimensional space (e.g., a 2D scatter plot). It uses a t-distribution to model the probabilities in this lower dimension, which helps to reduce the effects of crowding (where many points might cluster together in the low-dimensional space).  It iteratively adjusts the positions of the points in the low-dimensional space to minimize the difference between the high-dimensional and low-dimensional probability distributions.  The end result is a visualization where similar points are clustered together, reflecting the relationships in the original high-dimensional data.
+
+## Analogy
+
+Imagine you have a complex city map with many interconnected streets.  t-SNE is like creating a simplified map showing only the major intersections and their relative distances to each other.  While some detail is lost (the exact layout of smaller streets), the overall structure and relationships between major areas are preserved.  Similar areas on the detailed map will remain close together on the simplified map.
+
+
+## Diagram Suggestion
+
+A simple scatter plot would be beneficial.  The x and y axes would represent the two dimensions of the reduced data. Each point on the plot would represent a data point from the original high-dimensional dataset.  The proximity of points on the plot would visually represent their similarity in the original high-dimensional space.  Clusters of points would indicate groups of similar data points.  Color-coding the points based on their class labels (if available) would further enhance the visualization.

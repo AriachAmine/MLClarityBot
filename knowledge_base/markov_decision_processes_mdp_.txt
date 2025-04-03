@@ -1,0 +1,15 @@
+## Definition
+
+A Markov Decision Process (MDP) is a mathematical framework for modeling decision-making in situations where outcomes are partly random and partly under the control of a decision-maker.  It describes how an agent can learn to make optimal decisions over time by interacting with an environment.
+
+## Explanation
+
+MDPs work by defining a set of states an agent can be in, actions the agent can take in each state, the probabilities of transitioning between states given an action, and rewards associated with each state-action pair. The goal is to find a *policy* – a strategy that dictates which action to take in each state – that maximizes the cumulative reward the agent receives over time.  The "Markov" property means that the future state depends only on the current state and the action taken, not on the history of previous states. This simplifies the problem considerably.  Solving an MDP involves finding this optimal policy, often using techniques like dynamic programming, Monte Carlo methods, or temporal-difference learning.  This framework is crucial because it allows us to formally define and solve problems involving sequential decision-making under uncertainty, which is extremely common in real-world applications.
+
+## Analogy
+
+Imagine a robot navigating a maze. Each location in the maze is a *state*.  The robot's actions are moving North, South, East, or West. The *transition probabilities* represent the chance that the robot will successfully move in the intended direction (it might bump into a wall!).  Reaching the exit provides a large positive *reward*, while hitting walls results in small negative rewards. The robot's goal is to find the path that maximizes its total reward (reaching the exit quickly and avoiding walls).  This maze-navigation problem can be perfectly modeled as an MDP, with the robot learning an optimal policy (a sequence of actions) to reach the exit efficiently.
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would start with a "Current State" box, branching to different "Actions" boxes based on the possible actions. Each "Action" box would then branch to multiple "Next States" boxes, each with an associated probability and reward indicated.  This visually represents the core components of an MDP: states, actions, transition probabilities, and rewards.  The flowchart would illustrate how the agent moves through states based on its actions and the probabilistic nature of the transitions.

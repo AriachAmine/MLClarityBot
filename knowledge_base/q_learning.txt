@@ -1,0 +1,31 @@
+## Definition
+
+Q-learning is a model-free reinforcement learning algorithm.  It allows an agent to learn an optimal policy for navigating an environment by learning the expected cumulative reward (Q-value) for taking specific actions in particular states.
+
+## Explanation
+
+Imagine an agent exploring an environment.  This environment could be a simple grid world, a complex game, or even a robot navigating a room.  The agent interacts with the environment by taking actions, and the environment responds by giving the agent a reward (positive or negative) and transitioning the agent to a new state.  Q-learning focuses on learning a Q-table, which stores Q-values.  Each entry in the Q-table represents a state-action pair: Q(s, a) indicates the expected cumulative reward the agent will receive if it takes action 'a' in state 's' and follows the optimal policy thereafter.
+
+The algorithm updates these Q-values iteratively using the Q-learning update rule:
+
+`Q(s, a) = Q(s, a) + α [r + γ max_a' Q(s', a') - Q(s, a)]`
+
+Where:
+
+* `α` is the learning rate (how much the Q-value is updated).
+* `r` is the immediate reward received after taking action 'a' in state 's'.
+* `γ` is the discount factor (how much future rewards are valued).
+* `s'` is the new state after taking action 'a'.
+* `max_a' Q(s', a')` is the maximum Q-value for all possible actions in the new state `s'`.
+
+Essentially, the algorithm learns by gradually improving its estimate of the best action to take in each state based on the rewards it receives. Over time, the Q-values converge to optimal values, guiding the agent to select actions that maximize its cumulative reward.
+
+
+## Analogy
+
+Imagine a mouse learning to navigate a maze to find cheese.  Each location in the maze is a state, and each movement (forward, backward, left, right) is an action.  The cheese is a positive reward, and hitting a wall is a negative reward (or no reward).  The mouse, using Q-learning, gradually learns which paths lead to the cheese by associating each location and movement with a Q-value representing how likely that action is to lead to the cheese.  Over time, the mouse will learn the optimal path by choosing the actions with the highest Q-values in each location.
+
+
+## Diagram Suggestion
+
+A simple flowchart would be helpful.  It would start with the agent in an initial state.  Then, an arrow would show the agent selecting an action based on the current Q-values.  Another arrow would represent the environment transitioning the agent to a new state and providing a reward.  Finally, an arrow would show the update of
