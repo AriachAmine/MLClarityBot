@@ -197,7 +197,7 @@ For improved performance:
 -   **Memory Usage**: If you encounter memory issues, especially with a very large knowledge base:
     -   Consider reducing `chunk_size` in `rag_core.py` (default is often around 500-1000 characters). Smaller chunks require less memory per operation but might slightly impact context quality.
     -   If using different embedding models, ensure you are using one suitable for your available memory.
--   **Response Time**: The response time depends on the LLM. Lowering the `temperature` setting (if configurable in `chatbot.py` or `app.py`) can sometimes lead to faster, more deterministic responses, although potentially less creative ones.
+-   **Response Time**: The response time depends on the LLM. Lowering the `temperature` setting can sometimes lead to faster, more deterministic responses, although potentially less creative ones.
 
 ## Troubleshooting
 
@@ -260,7 +260,7 @@ Potential improvements for the project:
 
 ## License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details (if one exists, otherwise state the license clearly).
+This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.
 
 ## Acknowledgments
 
