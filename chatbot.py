@@ -91,7 +91,7 @@ def create_rag_chain(vector_store, llm, prompt_template):
     
     # Define how to retrieve context
     def retrieve_context(question):
-        docs = retriever.get_relevant_documents(question)
+        docs = retriever.invoke(question)
         # Join the content of all retrieved documents
         return "\n\n".join(doc.page_content for doc in docs)
     
